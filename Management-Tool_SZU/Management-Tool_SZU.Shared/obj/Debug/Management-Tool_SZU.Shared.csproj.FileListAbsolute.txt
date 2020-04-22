@@ -1,0 +1,6 @@
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Shared\bin\Debug\Management-Tool_SZU.Shared.dll
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Shared\bin\Debug\Management-Tool_SZU.Shared.pdb
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.csprojAssemblyReference.cache
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.dll
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.pdb

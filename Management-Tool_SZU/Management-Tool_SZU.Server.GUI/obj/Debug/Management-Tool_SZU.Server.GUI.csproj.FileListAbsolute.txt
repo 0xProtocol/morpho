@@ -1,0 +1,13 @@
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Server.GUI.exe.config
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Server.GUI.exe
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Server.GUI.pdb
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Shared.dll
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Shared.pdb
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csprojAssemblyReference.cache
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Form1.resources
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Properties.Resources.resources
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csproj.GenerateResource.cache
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csproj.CoreCompileInputs.cache
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csproj.CopyComplete
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.exe
+C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.pdb
