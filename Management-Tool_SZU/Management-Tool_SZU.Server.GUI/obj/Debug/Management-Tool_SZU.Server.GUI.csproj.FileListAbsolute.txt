@@ -11,3 +11,16 @@ C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\ob
 C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csproj.CopyComplete
 C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.exe
 C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.pdb
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Server.GUI.exe.config
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Server.GUI.exe
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Server.GUI.pdb
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Shared.dll
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Shared.pdb
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csprojAssemblyReference.cache
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Form1.resources
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Properties.Resources.resources
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csproj.GenerateResource.cache
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csproj.CoreCompileInputs.cache
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csproj.CopyComplete
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.exe
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.pdb

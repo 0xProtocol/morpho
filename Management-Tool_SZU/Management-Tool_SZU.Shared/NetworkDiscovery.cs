@@ -92,6 +92,22 @@ namespace Management_Tool_SZU.Shared
                     }
                 }
             }
+            else if (sector1 == 0)
+            {
+                ipAddressList.Clear();
+                for (int k = 0; k <= sector2; k++)
+                {
+                    for (int j = 0; j <= sector3; j++)
+                    {
+                        for (int i = 1; i < sector4; i++)
+                        {
+                            string[] tmpserveraddr = serverAddr.Split('.');
+                            string serveraddr8 = tmpserveraddr[0] + '.';
+                            ipAddressList.Add(IPAddress.Parse(serveraddr8 + k + "." + j + "." + i));
+                        }
+                    }
+                }
+            }
         }
         #endregion
         #region QuickSearch

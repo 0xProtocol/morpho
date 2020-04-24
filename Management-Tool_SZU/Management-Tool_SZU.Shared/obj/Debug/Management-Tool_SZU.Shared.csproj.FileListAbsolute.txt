@@ -4,3 +4,8 @@ C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\De
 C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.csproj.CoreCompileInputs.cache
 C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.dll
 C:\Users\Y520\source\repos\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.pdb
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Shared\bin\Debug\Management-Tool_SZU.Shared.dll
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Shared\bin\Debug\Management-Tool_SZU.Shared.pdb
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.csproj.CoreCompileInputs.cache
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.dll
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.pdb
