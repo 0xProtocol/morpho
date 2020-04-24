@@ -138,13 +138,12 @@ namespace Management_Tool_SZU.Server.GUI
                 {
                     com.SelectVoice("Microsoft Hazel Desktop");
                     com.SpeakAsync("Results are in the Statistic tab");
-                    string text = wmics.GetStatistic(IPAddress.Parse(lsb_discover.SelectedItem.ToString()));
-                    lsb_networkadapter.Items.Add(text);
                 }
                 catch (Exception)
                 {
                 }
-
+                string text = wmics.GetStatistic(IPAddress.Parse(lsb_discover.SelectedItem.ToString()));
+                lsb_networkadapter.Items.Add(text);
             }
         }
     }

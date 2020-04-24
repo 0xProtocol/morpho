@@ -9,3 +9,4 @@ D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Shared\bin\Debug\Manage
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.csproj.CoreCompileInputs.cache
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.dll
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.pdb
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.csprojAssemblyReference.cache
