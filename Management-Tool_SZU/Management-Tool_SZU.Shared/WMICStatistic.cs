@@ -20,7 +20,7 @@ namespace Management_Tool_SZU.Shared
             proc.StartInfo.CreateNoWindow = true;
             proc.StartInfo.UseShellExecute = false;
             proc.Start();
-            proc.StandardInput.WriteLine("/node:" + ip + " cpu get loadpercentage");
+            proc.StandardInput.WriteLine("/user:"+"Vienna"+ "/password:" + "test123" +"/node:192.168.0.3 os get name");
             proc.StandardInput.Flush();
             proc.StandardInput.Close();
             StreamReader sr = proc.StandardOutput;
