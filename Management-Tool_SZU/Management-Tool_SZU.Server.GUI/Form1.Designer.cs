@@ -32,34 +32,42 @@
             this.lsb_networkadapter = new System.Windows.Forms.ListBox();
             this.tcWindow = new System.Windows.Forms.TabControl();
             this.tcNetworkDicovery = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_Discover = new System.Windows.Forms.Button();
+            this.pbnetwork = new System.Windows.Forms.ProgressBar();
             this.lblLoading = new System.Windows.Forms.Label();
-            this.lblSearchIP = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbx_Discovery = new System.Windows.Forms.TextBox();
             this.lblIP = new System.Windows.Forms.Label();
+            this.lblSearchIP = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lsb_discover = new System.Windows.Forms.ListBox();
-            this.btn_Discover = new System.Windows.Forms.Button();
-            this.pbnetwork = new System.Windows.Forms.ProgressBar();
-            this.tbx_Discovery = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tcStatistics = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.gpui = new System.Windows.Forms.GroupBox();
+            this.tbxusername = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbxpassword = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbxuserip = new System.Windows.Forms.TextBox();
             this.cb = new Management_Tool_SZU.Server.GUI.CircularButton();
             this.tcWindow.SuspendLayout();
             this.tcNetworkDicovery.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.tcStatistics.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tcStatistics.SuspendLayout();
+            this.gpui.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbxNetwork
@@ -100,6 +108,7 @@
             // tcNetworkDicovery
             // 
             this.tcNetworkDicovery.BackColor = System.Drawing.Color.DodgerBlue;
+            this.tcNetworkDicovery.Controls.Add(this.gpui);
             this.tcNetworkDicovery.Controls.Add(this.groupBox3);
             this.tcNetworkDicovery.Controls.Add(this.groupBox2);
             this.tcNetworkDicovery.Controls.Add(this.groupBox1);
@@ -119,6 +128,50 @@
             this.tcNetworkDicovery.Text = "Network Discovery";
             this.tcNetworkDicovery.Click += new System.EventHandler(this.TcNetworkDicovery_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.cb);
+            this.groupBox3.Location = new System.Drawing.Point(302, 432);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(658, 113);
+            this.groupBox3.TabIndex = 105;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Statistic";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btn_Discover);
+            this.groupBox2.Controls.Add(this.pbnetwork);
+            this.groupBox2.Controls.Add(this.lblLoading);
+            this.groupBox2.Location = new System.Drawing.Point(536, 301);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(424, 125);
+            this.groupBox2.TabIndex = 104;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Discovery";
+            // 
+            // btn_Discover
+            // 
+            this.btn_Discover.Font = new System.Drawing.Font("Rockwell", 18.5F);
+            this.btn_Discover.Location = new System.Drawing.Point(7, 70);
+            this.btn_Discover.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btn_Discover.Name = "btn_Discover";
+            this.btn_Discover.Size = new System.Drawing.Size(408, 41);
+            this.btn_Discover.TabIndex = 83;
+            this.btn_Discover.Text = "Start Discovery";
+            this.btn_Discover.UseVisualStyleBackColor = true;
+            this.btn_Discover.Click += new System.EventHandler(this.Btn_Discover_Click_1);
+            // 
+            // pbnetwork
+            // 
+            this.pbnetwork.BackColor = System.Drawing.Color.Blue;
+            this.pbnetwork.ForeColor = System.Drawing.Color.Blue;
+            this.pbnetwork.Location = new System.Drawing.Point(7, 41);
+            this.pbnetwork.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.pbnetwork.Name = "pbnetwork";
+            this.pbnetwork.Size = new System.Drawing.Size(408, 20);
+            this.pbnetwork.TabIndex = 89;
+            // 
             // lblLoading
             // 
             this.lblLoading.AutoSize = true;
@@ -127,6 +180,37 @@
             this.lblLoading.Size = new System.Drawing.Size(99, 13);
             this.lblLoading.TabIndex = 101;
             this.lblLoading.Text = "Loading Progress:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tbx_Discovery);
+            this.groupBox1.Controls.Add(this.lblIP);
+            this.groupBox1.Controls.Add(this.tbxNetwork);
+            this.groupBox1.Controls.Add(this.lblSearchIP);
+            this.groupBox1.Location = new System.Drawing.Point(302, 301);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(222, 125);
+            this.groupBox1.TabIndex = 103;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Discovery Configuration";
+            this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
+            // 
+            // tbx_Discovery
+            // 
+            this.tbx_Discovery.Location = new System.Drawing.Point(7, 41);
+            this.tbx_Discovery.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tbx_Discovery.Name = "tbx_Discovery";
+            this.tbx_Discovery.Size = new System.Drawing.Size(208, 20);
+            this.tbx_Discovery.TabIndex = 84;
+            // 
+            // lblIP
+            // 
+            this.lblIP.AutoSize = true;
+            this.lblIP.Location = new System.Drawing.Point(6, 25);
+            this.lblIP.Name = "lblIP";
+            this.lblIP.Size = new System.Drawing.Size(65, 13);
+            this.lblIP.TabIndex = 99;
+            this.lblIP.Text = "IP-Adresse:";
             // 
             // lblSearchIP
             // 
@@ -138,14 +222,15 @@
             this.lblSearchIP.Text = "Subnetmask:";
             this.lblSearchIP.Click += new System.EventHandler(this.LblSearchIP_Click);
             // 
-            // lblIP
+            // pictureBox1
             // 
-            this.lblIP.AutoSize = true;
-            this.lblIP.Location = new System.Drawing.Point(6, 25);
-            this.lblIP.Name = "lblIP";
-            this.lblIP.Size = new System.Drawing.Size(65, 13);
-            this.lblIP.TabIndex = 99;
-            this.lblIP.Text = "IP-Adresse:";
+            this.pictureBox1.Image = global::Management_Tool_SZU.Server.GUI.Properties.Resources.morpho2;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 301);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(280, 244);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 102;
+            this.pictureBox1.TabStop = false;
             // 
             // panel7
             // 
@@ -187,64 +272,9 @@
             this.lsb_discover.Location = new System.Drawing.Point(977, 16);
             this.lsb_discover.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.lsb_discover.Name = "lsb_discover";
-            this.lsb_discover.Size = new System.Drawing.Size(320, 532);
+            this.lsb_discover.Size = new System.Drawing.Size(320, 412);
             this.lsb_discover.TabIndex = 82;
-            // 
-            // btn_Discover
-            // 
-            this.btn_Discover.Font = new System.Drawing.Font("Rockwell", 18.5F);
-            this.btn_Discover.Location = new System.Drawing.Point(7, 70);
-            this.btn_Discover.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btn_Discover.Name = "btn_Discover";
-            this.btn_Discover.Size = new System.Drawing.Size(408, 41);
-            this.btn_Discover.TabIndex = 83;
-            this.btn_Discover.Text = "Start Discovery";
-            this.btn_Discover.UseVisualStyleBackColor = true;
-            this.btn_Discover.Click += new System.EventHandler(this.Btn_Discover_Click_1);
-            // 
-            // pbnetwork
-            // 
-            this.pbnetwork.BackColor = System.Drawing.Color.Blue;
-            this.pbnetwork.ForeColor = System.Drawing.Color.Blue;
-            this.pbnetwork.Location = new System.Drawing.Point(7, 41);
-            this.pbnetwork.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pbnetwork.Name = "pbnetwork";
-            this.pbnetwork.Size = new System.Drawing.Size(408, 20);
-            this.pbnetwork.TabIndex = 89;
-            // 
-            // tbx_Discovery
-            // 
-            this.tbx_Discovery.Location = new System.Drawing.Point(7, 41);
-            this.tbx_Discovery.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tbx_Discovery.Name = "tbx_Discovery";
-            this.tbx_Discovery.Size = new System.Drawing.Size(208, 20);
-            this.tbx_Discovery.TabIndex = 84;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.tbx_Discovery);
-            this.groupBox1.Controls.Add(this.lblIP);
-            this.groupBox1.Controls.Add(this.tbxNetwork);
-            this.groupBox1.Controls.Add(this.lblSearchIP);
-            this.groupBox1.Location = new System.Drawing.Point(302, 301);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(222, 125);
-            this.groupBox1.TabIndex = 103;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Discovery Configuration";
-            this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btn_Discover);
-            this.groupBox2.Controls.Add(this.pbnetwork);
-            this.groupBox2.Controls.Add(this.lblLoading);
-            this.groupBox2.Location = new System.Drawing.Point(536, 301);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(424, 125);
-            this.groupBox2.TabIndex = 104;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Discovery";
+            this.lsb_discover.SelectedIndexChanged += new System.EventHandler(this.Lsb_discover_SelectedIndexChanged);
             // 
             // tcStatistics
             // 
@@ -259,21 +289,13 @@
             this.tcStatistics.TabIndex = 3;
             this.tcStatistics.Text = "Statistics";
             // 
-            // panel1
+            // panel8
             // 
-            this.panel1.BackColor = System.Drawing.Color.Blue;
-            this.panel1.Location = new System.Drawing.Point(7, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1307, 10);
-            this.panel1.TabIndex = 96;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Blue;
-            this.panel2.Location = new System.Drawing.Point(7, 551);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1307, 10);
-            this.panel2.TabIndex = 97;
+            this.panel8.BackColor = System.Drawing.Color.Blue;
+            this.panel8.Location = new System.Drawing.Point(1304, 1);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(10, 560);
+            this.panel8.TabIndex = 100;
             // 
             // panel6
             // 
@@ -283,33 +305,85 @@
             this.panel6.Size = new System.Drawing.Size(10, 560);
             this.panel6.TabIndex = 99;
             // 
-            // panel8
+            // panel2
             // 
-            this.panel8.BackColor = System.Drawing.Color.Blue;
-            this.panel8.Location = new System.Drawing.Point(1304, 1);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 560);
-            this.panel8.TabIndex = 100;
+            this.panel2.BackColor = System.Drawing.Color.Blue;
+            this.panel2.Location = new System.Drawing.Point(7, 551);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1307, 10);
+            this.panel2.TabIndex = 97;
             // 
-            // groupBox3
+            // panel1
             // 
-            this.groupBox3.Controls.Add(this.cb);
-            this.groupBox3.Location = new System.Drawing.Point(302, 432);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(658, 113);
-            this.groupBox3.TabIndex = 105;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Statistic";
+            this.panel1.BackColor = System.Drawing.Color.Blue;
+            this.panel1.Location = new System.Drawing.Point(7, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1307, 10);
+            this.panel1.TabIndex = 96;
             // 
-            // pictureBox1
+            // gpui
             // 
-            this.pictureBox1.Image = global::Management_Tool_SZU.Server.GUI.Properties.Resources.morpho2;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 301);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(280, 244);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 102;
-            this.pictureBox1.TabStop = false;
+            this.gpui.Controls.Add(this.tbxuserip);
+            this.gpui.Controls.Add(this.label3);
+            this.gpui.Controls.Add(this.tbxpassword);
+            this.gpui.Controls.Add(this.label2);
+            this.gpui.Controls.Add(this.label1);
+            this.gpui.Controls.Add(this.tbxusername);
+            this.gpui.Location = new System.Drawing.Point(977, 434);
+            this.gpui.Name = "gpui";
+            this.gpui.Size = new System.Drawing.Size(320, 111);
+            this.gpui.TabIndex = 106;
+            this.gpui.TabStop = false;
+            this.gpui.Text = "User Information";
+            // 
+            // tbxusername
+            // 
+            this.tbxusername.Location = new System.Drawing.Point(96, 53);
+            this.tbxusername.Name = "tbxusername";
+            this.tbxusername.Size = new System.Drawing.Size(218, 20);
+            this.tbxusername.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 101;
+            this.label1.Text = "Username: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 102;
+            this.label2.Text = "Password:";
+            // 
+            // tbxpassword
+            // 
+            this.tbxpassword.Location = new System.Drawing.Point(96, 80);
+            this.tbxpassword.Name = "tbxpassword";
+            this.tbxpassword.Size = new System.Drawing.Size(218, 20);
+            this.tbxpassword.TabIndex = 103;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.TabIndex = 104;
+            this.label3.Text = "Selected IP:";
+            // 
+            // tbxuserip
+            // 
+            this.tbxuserip.Location = new System.Drawing.Point(198, 23);
+            this.tbxuserip.Name = "tbxuserip";
+            this.tbxuserip.ReadOnly = true;
+            this.tbxuserip.Size = new System.Drawing.Size(116, 20);
+            this.tbxuserip.TabIndex = 105;
             // 
             // cb
             // 
@@ -334,13 +408,15 @@
             this.Load += new System.EventHandler(this.ServerSettings_Load);
             this.tcWindow.ResumeLayout(false);
             this.tcNetworkDicovery.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.tcStatistics.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tcStatistics.ResumeLayout(false);
+            this.gpui.ResumeLayout(false);
+            this.gpui.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -372,6 +448,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox3;
         private CircularButton cb;
+        private System.Windows.Forms.GroupBox gpui;
+        private System.Windows.Forms.TextBox tbxpassword;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbxusername;
+        private System.Windows.Forms.TextBox tbxuserip;
+        private System.Windows.Forms.Label label3;
     }
 }
 

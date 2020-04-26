@@ -14,6 +14,8 @@ namespace Management_Tool_SZU.Server.GUI
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
+            
+            tbxpassword.PasswordChar = '*';
         }
 
         private SpeechSynthesizer com = new SpeechSynthesizer();
@@ -142,9 +144,15 @@ namespace Management_Tool_SZU.Server.GUI
                 catch (Exception)
                 {
                 }
-                string text = wmics.GetStatistic(IPAddress.Parse(lsb_discover.SelectedItem.ToString()));
+                string text = wmics.GetStatistic(IPAddress.Parse(tbxuserip.Text),tbxusername.Text,tbxpassword.Text);
                 lsb_networkadapter.Items.Add(text);
             }
+        }
+
+        private void Lsb_discover_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string userip = lsb_discover.GetItemText(lsb_discover.SelectedItem);
+            tbxuserip.Text = userip;
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Management_Tool_SZU.Shared
 {
    public  class WMICStatistic
     {
-        public string GetStatistic(IPAddress ip)
+        public string GetStatistic(IPAddress ip, string username, string password)
         {
             Process proc = new Process();
             proc.StartInfo.FileName = "cmd.exe";
@@ -20,7 +20,7 @@ namespace Management_Tool_SZU.Shared
             proc.StartInfo.CreateNoWindow = true;
             proc.StartInfo.UseShellExecute = false;
             proc.Start();
-            proc.StandardInput.WriteLine("wmic / user:"+"Vienna"+ " /password:" + "test123" +" /node:192.168.0.3 os get name");
+            proc.StandardInput.WriteLine("wmic / user:"+username+ " /password:" + password + " /node:"+ ip + " os get name");
             proc.StandardInput.Flush();
             proc.StandardInput.Close();
             StreamReader sr = proc.StandardOutput;
