@@ -14,13 +14,13 @@ namespace Management_Tool_SZU.Shared
         public string GetStatistic(IPAddress ip)
         {
             Process proc = new Process();
-            proc.StartInfo.FileName = "wmic.exe";
+            proc.StartInfo.FileName = "cmd.exe";
             proc.StartInfo.RedirectStandardInput = true;
             proc.StartInfo.RedirectStandardOutput = true;
             proc.StartInfo.CreateNoWindow = true;
             proc.StartInfo.UseShellExecute = false;
             proc.Start();
-            proc.StandardInput.WriteLine("/user:"+"Vienna"+ " /password:" + "test123" +" /node:192.168.0.3 os get name");
+            proc.StandardInput.WriteLine("wmic / user:"+"Vienna"+ " /password:" + "test123" +" /node:192.168.0.3 os get name");
             proc.StandardInput.Flush();
             proc.StandardInput.Close();
             StreamReader sr = proc.StandardOutput;
