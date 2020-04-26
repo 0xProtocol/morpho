@@ -15,3 +15,9 @@ C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Sha
 C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.csprojAssemblyReference.cache
 C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.dll
 C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.pdb
+C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Shared\bin\Debug\Management-Tool_SZU.Shared.dll
+C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Shared\bin\Debug\Management-Tool_SZU.Shared.pdb
+C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.csprojAssemblyReference.cache
+C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.dll
+C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Shared\obj\Debug\Management-Tool_SZU.Shared.pdb

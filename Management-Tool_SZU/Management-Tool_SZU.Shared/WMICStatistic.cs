@@ -7,7 +7,8 @@ namespace Management_Tool_SZU.Shared
     {
         public string GetStatistic(string ip, string username, string password)
         {
-            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + $"wmic /user:{username} /password:{password} /node:{ip} cpu get name");
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " os get name");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
             procStartInfo.RedirectStandardOutput = true;
             procStartInfo.UseShellExecute = false;
             procStartInfo.CreateNoWindow = true;
