@@ -24,3 +24,15 @@ D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Ma
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csproj.CopyComplete
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.exe
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.pdb
+C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Server.GUI.exe.config
+C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Server.GUI.exe
+C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Server.GUI.pdb
+C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Shared.dll
+C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Shared.pdb
+C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csprojAssemblyReference.cache
+C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Form1.resources
+C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Properties.Resources.resources
+C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csproj.GenerateResource.cache
+C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csproj.CopyComplete
+C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.exe
+C:\Users\Marku\Desktop\GitHUB\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.pdb

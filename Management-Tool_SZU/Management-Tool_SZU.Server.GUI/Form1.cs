@@ -144,7 +144,7 @@ namespace Management_Tool_SZU.Server.GUI
                 catch (Exception)
                 {
                 }
-                string text = wmics.GetStatistic(IPAddress.Parse(tbxuserip.Text),tbxusername.Text,tbxpassword.Text);
+                string text = wmics.GetStatistic(tbxuserip.Text,tbxusername.Text,tbxpassword.Text);
                 lsb_networkadapter.Items.Add(text);
             }
         }

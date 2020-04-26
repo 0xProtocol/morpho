@@ -1,32 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Management_Tool_SZU.Shared
 {
-   public  class WMICStatistic
+    public class WMICStatistic
     {
-        public string GetStatistic(IPAddress ip, string username, string password)
+        public string GetStatistic(string ip, string username, string password)
         {
-            Process proc = new Process();
-            proc.StartInfo.FileName = "cmd.exe";
-            proc.StartInfo.RedirectStandardInput = true;
-            proc.StartInfo.RedirectStandardOutput = true;
-            proc.StartInfo.CreateNoWindow = true;
-            proc.StartInfo.UseShellExecute = false;
-            proc.Start();
-            proc.StandardInput.WriteLine("wmic / user:"+username+ " /password:" + password + " /node:"+ ip + " os get name");
-            proc.StandardInput.Flush();
-            proc.StandardInput.Close();
-            StreamReader sr = proc.StandardOutput;
-            string output = sr.ReadToEnd();
-            proc.WaitForExit();
-            return output;
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + "wmic cpu get name");
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
         }
     }
 }
