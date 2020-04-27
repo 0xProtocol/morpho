@@ -15,7 +15,7 @@ namespace Management_Tool_SZU.Shared
         public static extern int SendARP(int DestIP, int SrcIP, byte[] pMacAddr, ref uint PhyAddrLen);
         #endregion
         #region Variablen
-        List<IPAddress> ipAddressList = new List<IPAddress>();
+       public List<IPAddress> ipAddressList = new List<IPAddress>();
         public string output;
         public string networkips;
         public string serverAddr;

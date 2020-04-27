@@ -58,6 +58,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cb = new Management_Tool_SZU.Server.GUI.CircularButton();
             this.cboperatingsystem = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Discover = new System.Windows.Forms.Button();
@@ -81,7 +82,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cb = new Management_Tool_SZU.Server.GUI.CircularButton();
+            this.All = new System.Windows.Forms.Button();
             this.tcWindow.SuspendLayout();
             this.tcNetworkDicovery.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -228,6 +229,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.All);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.cbNetworkAdapter);
             this.groupBox3.Controls.Add(this.label11);
@@ -450,6 +452,19 @@
             this.groupBox4.TabIndex = 108;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Action";
+            // 
+            // cb
+            // 
+            this.cb.BackgroundImage = global::Management_Tool_SZU.Server.GUI.Properties.Resources.morphobutton;
+            this.cb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cb.Font = new System.Drawing.Font("Rockwell", 10F);
+            this.cb.Location = new System.Drawing.Point(22, 15);
+            this.cb.Name = "cb";
+            this.cb.Size = new System.Drawing.Size(79, 76);
+            this.cb.TabIndex = 106;
+            this.cb.Text = "Morph it!";
+            this.cb.UseVisualStyleBackColor = true;
+            this.cb.Click += new System.EventHandler(this.Cb_Click);
             // 
             // cboperatingsystem
             // 
@@ -680,18 +695,15 @@
             this.panel1.Size = new System.Drawing.Size(1307, 10);
             this.panel1.TabIndex = 96;
             // 
-            // cb
+            // All
             // 
-            this.cb.BackgroundImage = global::Management_Tool_SZU.Server.GUI.Properties.Resources.morphobutton;
-            this.cb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cb.Font = new System.Drawing.Font("Rockwell", 10F);
-            this.cb.Location = new System.Drawing.Point(22, 15);
-            this.cb.Name = "cb";
-            this.cb.Size = new System.Drawing.Size(79, 76);
-            this.cb.TabIndex = 106;
-            this.cb.Text = "Morph it!";
-            this.cb.UseVisualStyleBackColor = true;
-            this.cb.Click += new System.EventHandler(this.Cb_Click);
+            this.All.Location = new System.Drawing.Point(514, 41);
+            this.All.Name = "All";
+            this.All.Size = new System.Drawing.Size(108, 21);
+            this.All.TabIndex = 124;
+            this.All.Text = "ALLIPS";
+            this.All.UseVisualStyleBackColor = true;
+            this.All.Click += new System.EventHandler(this.All_Click);
             // 
             // Form1
             // 
@@ -778,6 +790,7 @@
         private System.Windows.Forms.ComboBox cbNetworkAdapter;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button All;
     }
 }
 

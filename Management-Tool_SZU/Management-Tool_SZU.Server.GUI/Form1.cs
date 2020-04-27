@@ -1,6 +1,8 @@
 ﻿using Management_Tool_SZU.Shared;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Net;
 using System.Speech.Synthesis;
 using System.Threading;
 using System.Windows.Forms;
@@ -125,18 +127,19 @@ namespace Management_Tool_SZU.Server.GUI
 
         private void Cb_Click(object sender, EventArgs e)
         {
-            ThreadStart ts = new ThreadStart(GetStatisticForm);
+          /*/  ThreadStart ts = new ThreadStart(GetStatisticForm);
             Thread t = new Thread(ts)
             {
                 IsBackground = true
             };
             t.Start();
             tcWindow.SelectedIndex = 1;
+            /*/
         }
 
-        private void GetStatisticForm()
+        private void GetStatisticForm(IPAddress ip)
         {
-            if (this.lsb_discover.SelectedIndex == -1)
+          /*/  if (this.lsb_discover.SelectedIndex == -1)
             {
                 try
                 {
@@ -148,7 +151,7 @@ namespace Management_Tool_SZU.Server.GUI
                 }
             }
             else
-            {
+            {/*/
                 try
                 {
                     com.SelectVoice("Microsoft Hazel Desktop");
@@ -157,8 +160,8 @@ namespace Management_Tool_SZU.Server.GUI
                 catch (Exception)
                 {
                 }
-                WMICAction();
-            }
+                WMICAction(ip);
+            
         }
 
         private void Lsb_discover_SelectedIndexChanged(object sender, EventArgs e)
@@ -191,57 +194,57 @@ namespace Management_Tool_SZU.Server.GUI
             lvstatistics.Items.Add(lvi);
         }
 
-        private void WMICAction()
+        private void WMICAction(IPAddress ip)
         {
             // OS
             if (cboperatingsystem.Text == "All")
             {
-                string OperatingSystemName = wmics.GetStatistic(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemName = wmics.GetStatistic(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemName);
 
-                string OperatingSystemArchitecture = wmics.GetStatistic30(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemArchitecture = wmics.GetStatistic30(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemArchitecture);
 
-                string OperatingSystemInstallDate = wmics.GetStatistic31(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemInstallDate = wmics.GetStatistic31(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemInstallDate);
 
-                string OperatingSystemRegisteredUser = wmics.GetStatistic32(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemRegisteredUser = wmics.GetStatistic32(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemRegisteredUser);
 
-                string OperatingSystemVersion = wmics.GetStatistic33(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemVersion = wmics.GetStatistic33(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemVersion);
 
-                string OperatingSystemStatus = wmics.GetStatistic34(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemStatus = wmics.GetStatistic34(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemStatus);
             }
             if (cboperatingsystem.Text == "Name")
             {
-                string OperatingSystemName = wmics.GetStatistic(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemName = wmics.GetStatistic(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemName);
             }
             if (cboperatingsystem.Text == "Architecture")
             {
-                string OperatingSystemArchitecture = wmics.GetStatistic30(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemArchitecture = wmics.GetStatistic30(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemArchitecture);
             }
             if (cboperatingsystem.Text == "Registered User")
             {
-                string OperatingSystemArchitecture = wmics.GetStatistic30(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemArchitecture = wmics.GetStatistic30(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemArchitecture);
             }
             if (cboperatingsystem.Text == "Install Date")
             {
-                string OperatingSystemInstallDate = wmics.GetStatistic31(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemInstallDate = wmics.GetStatistic31(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemInstallDate);
             }
             if (cboperatingsystem.Text == "Version")
             {
-                string OperatingSystemVersion = wmics.GetStatistic33(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemVersion = wmics.GetStatistic33(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemVersion);
             }
             if (cboperatingsystem.Text == "Status")
             {
-                string OperatingSystemStatus = wmics.GetStatistic34(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemStatus = wmics.GetStatistic34(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemStatus);
             }
 
@@ -534,6 +537,19 @@ namespace Management_Tool_SZU.Server.GUI
             cbLogicalDisk.SelectedIndex = cbLogicalDisk.Items.Count - 2;
             cbNetworkAdapter.SelectedIndex = cbNetworkAdapter.Items.Count - 2;
             cboperatingsystem.SelectedIndex = cboperatingsystem.Items.Count - 2;
+        }
+        public List<IPAddress> ipAddressList2 = new List<IPAddress>();
+        
+        private void All_Click(object sender, EventArgs e)
+        {
+            ipAddressList2.Add(IPAddress.Parse("192.168.0.2"));
+            ipAddressList2.Add(IPAddress.Parse("192.168.0.5"));
+            foreach (IPAddress item in ipAddressList2)
+            {
+                GetStatisticForm(item);
+                tcWindow.SelectedIndex = 1;
+            }
+            
         }
     }
 }
