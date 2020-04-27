@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbxusername = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.cbNetworkAdapter = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cbLogicalDisk = new System.Windows.Forms.ComboBox();
@@ -156,9 +157,9 @@
             // 
             this.groupBox5.Controls.Add(this.label3);
             this.groupBox5.Controls.Add(this.tbxuserip);
-            this.groupBox5.Location = new System.Drawing.Point(702, 282);
+            this.groupBox5.Location = new System.Drawing.Point(702, 278);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(261, 144);
+            this.groupBox5.Size = new System.Drawing.Size(261, 148);
             this.groupBox5.TabIndex = 107;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Elements";
@@ -227,6 +228,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.cbNetworkAdapter);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.cbLogicalDisk);
@@ -251,6 +253,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Statistic";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(517, 80);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 21);
+            this.button1.TabIndex = 123;
+            this.button1.Text = "Select All";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.SelectAll_Click);
+            // 
             // cbNetworkAdapter
             // 
             this.cbNetworkAdapter.FormattingEnabled = true;
@@ -261,7 +273,8 @@
             "Name",
             "Adaptertype",
             "Installed",
-            "All"});
+            "All",
+            " "});
             this.cbNetworkAdapter.Location = new System.Drawing.Point(387, 41);
             this.cbNetworkAdapter.Name = "cbNetworkAdapter";
             this.cbNetworkAdapter.Size = new System.Drawing.Size(121, 20);
@@ -283,7 +296,8 @@
             "Caption",
             "FileSystem",
             "Size",
-            "All"});
+            "All",
+            " "});
             this.cbLogicalDisk.Location = new System.Drawing.Point(260, 80);
             this.cbLogicalDisk.Name = "cbLogicalDisk";
             this.cbLogicalDisk.Size = new System.Drawing.Size(121, 20);
@@ -306,7 +320,8 @@
             "MediaLoaded",
             "Status",
             "Size",
-            "All"});
+            "All",
+            " "});
             this.cbDiskDrive.Location = new System.Drawing.Point(260, 41);
             this.cbDiskDrive.Name = "cbDiskDrive";
             this.cbDiskDrive.Size = new System.Drawing.Size(121, 20);
@@ -332,7 +347,8 @@
             "Name",
             "Status",
             "Workgroup",
-            "All"});
+            "All",
+            " "});
             this.cbComputerSystem.Location = new System.Drawing.Point(133, 80);
             this.cbComputerSystem.Name = "cbComputerSystem";
             this.cbComputerSystem.Size = new System.Drawing.Size(121, 20);
@@ -354,7 +370,8 @@
             "Manufacturer",
             "Serialnumber",
             "Status",
-            "All"});
+            "All",
+            " "});
             this.cbBaseBoard.Location = new System.Drawing.Point(133, 41);
             this.cbBaseBoard.Name = "cbBaseBoard";
             this.cbBaseBoard.Size = new System.Drawing.Size(121, 20);
@@ -367,7 +384,8 @@
             "Lastbootuptime",
             "Timezonedescription",
             "Systemtimezonesetting",
-            "All"});
+            "All",
+            " "});
             this.cbAlternative.Location = new System.Drawing.Point(390, 80);
             this.cbAlternative.Name = "cbAlternative";
             this.cbAlternative.Size = new System.Drawing.Size(121, 20);
@@ -398,7 +416,8 @@
             "Manufacturer",
             "Version",
             "Status",
-            "All"});
+            "All",
+            " "});
             this.cbBIOS.Location = new System.Drawing.Point(6, 80);
             this.cbBIOS.Name = "cbBIOS";
             this.cbBIOS.Size = new System.Drawing.Size(121, 20);
@@ -434,6 +453,8 @@
             // 
             // cboperatingsystem
             // 
+            this.cboperatingsystem.BackColor = System.Drawing.SystemColors.Window;
+            this.cboperatingsystem.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.cboperatingsystem.FormattingEnabled = true;
             this.cboperatingsystem.Items.AddRange(new object[] {
             "Name",
@@ -442,7 +463,8 @@
             "Registered User",
             "Version",
             "Status",
-            "All"});
+            "All",
+            " "});
             this.cboperatingsystem.Location = new System.Drawing.Point(6, 41);
             this.cboperatingsystem.Name = "cboperatingsystem";
             this.cboperatingsystem.Size = new System.Drawing.Size(121, 20);
@@ -536,9 +558,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Management_Tool_SZU.Server.GUI.Properties.Resources.morpho2;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 301);
+            this.pictureBox1.Location = new System.Drawing.Point(89, 365);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(280, 244);
+            this.pictureBox1.Size = new System.Drawing.Size(131, 103);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 102;
             this.pictureBox1.TabStop = false;
@@ -662,10 +684,12 @@
             // 
             this.cb.BackgroundImage = global::Management_Tool_SZU.Server.GUI.Properties.Resources.morphobutton;
             this.cb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cb.Font = new System.Drawing.Font("Rockwell", 10F);
             this.cb.Location = new System.Drawing.Point(22, 15);
             this.cb.Name = "cb";
             this.cb.Size = new System.Drawing.Size(79, 76);
             this.cb.TabIndex = 106;
+            this.cb.Text = "Morph it!";
             this.cb.UseVisualStyleBackColor = true;
             this.cb.Click += new System.EventHandler(this.Cb_Click);
             // 
@@ -753,6 +777,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbNetworkAdapter;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button1;
     }
 }
 

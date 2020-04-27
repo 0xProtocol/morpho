@@ -13,7 +13,14 @@ namespace Management_Tool_SZU.Server.GUI
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
-
+            cbAlternative.SelectedIndex = 0;
+            cbBaseBoard.SelectedIndex = 0;
+            cbBIOS.SelectedIndex = 0;
+            cbComputerSystem.SelectedIndex = 0;
+            cbDiskDrive.SelectedIndex = 0;
+            cbLogicalDisk.SelectedIndex = 0;
+            cbNetworkAdapter.SelectedIndex = 0;
+            cboperatingsystem.SelectedIndex = 0;
             tbxpassword.PasswordChar = '*';
         }
 
@@ -515,6 +522,18 @@ namespace Management_Tool_SZU.Server.GUI
             else
             {
             }
+        }
+
+        private void SelectAll_Click(object sender, EventArgs e)
+        {
+            cbAlternative.SelectedIndex = cbAlternative.Items.Count - 2;
+            cbBaseBoard.SelectedIndex = cbBaseBoard.Items.Count - 2;
+            cbBIOS.SelectedIndex = cbBIOS.Items.Count - 2;
+            cbComputerSystem.SelectedIndex = cbComputerSystem.Items.Count - 2;
+            cbDiskDrive.SelectedIndex = cbDiskDrive.Items.Count - 2;
+            cbLogicalDisk.SelectedIndex = cbLogicalDisk.Items.Count - 2;
+            cbNetworkAdapter.SelectedIndex = cbNetworkAdapter.Items.Count - 2;
+            cboperatingsystem.SelectedIndex = cboperatingsystem.Items.Count - 2;
         }
     }
 }
