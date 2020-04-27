@@ -338,5 +338,301 @@ namespace Management_Tool_SZU.Shared
             }
             return result;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ip"></param>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public string GetStatistic20(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " os get lastbootuptime");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic21(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " path Win32_LogicalDisk Get Caption");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic22(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_LogicalDisk Get FileSystem");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic23(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_LogicalDisk Get size");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic24(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_NetworkAdapter Get Description");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic25(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_NetworkAdapter Get manufacturer");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic26(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_NetworkAdapter Get macaddress");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic27(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_NetworkAdapter Get name");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic28(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_NetworkAdapter Get adaptertype");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic29(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_NetworkAdapter Get installed");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic30(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_OperatingSystem Get OSArchitecture");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic31(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_OperatingSystem Get installdate");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic32(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_OperatingSystem Get registereduser");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic33(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_OperatingSystem Get version");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic34(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_OperatingSystem Get status");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic35(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_TimeZone Get Description");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
+        public string GetStatistic36(string ip, string username, string password)
+        {
+            string request = (@"wmic / user:""" + username + "\" /password:\"" + password + "\" /node:" + ip + " Path Win32_SystemTimeZone Get Setting");
+            ProcessStartInfo procStartInfo = new ProcessStartInfo("cmd", "/c " + request);
+            procStartInfo.RedirectStandardOutput = true;
+            procStartInfo.UseShellExecute = false;
+            procStartInfo.CreateNoWindow = true;
+            string result = string.Empty;
+            using (Process process = new Process())
+            {
+                process.StartInfo = procStartInfo;
+                process.Start();
+                process.WaitForExit();
+                result = process.StandardOutput.ReadToEnd();
+            }
+            return result;
+        }
     }
 }
