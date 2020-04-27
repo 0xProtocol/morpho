@@ -32,14 +32,32 @@
             this.lsb_networkadapter = new System.Windows.Forms.ListBox();
             this.tcWindow = new System.Windows.Forms.TabControl();
             this.tcNetworkDicovery = new System.Windows.Forms.TabPage();
-            this.gpui = new System.Windows.Forms.GroupBox();
-            this.tbxuserip = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.tbxuserip = new System.Windows.Forms.TextBox();
+            this.gpui = new System.Windows.Forms.GroupBox();
             this.tbxpassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxusername = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbNetworkAdapter = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbLogicalDisk = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.cbDiskDrive = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbComputerSystem = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cbBaseBoard = new System.Windows.Forms.ComboBox();
+            this.cbAlternative = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cbBIOS = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cboperatingsystem = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Discover = new System.Windows.Forms.Button();
             this.pbnetwork = new System.Windows.Forms.ProgressBar();
@@ -55,42 +73,24 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lsb_discover = new System.Windows.Forms.ListBox();
             this.tcStatistics = new System.Windows.Forms.TabPage();
+            this.lvstatistics = new System.Windows.Forms.ListView();
+            this.Property = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Result = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cboperatingsystem = new System.Windows.Forms.ComboBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.lvstatistics = new System.Windows.Forms.ListView();
-            this.Property = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Result = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cb = new Management_Tool_SZU.Server.GUI.CircularButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.tcWindow.SuspendLayout();
             this.tcNetworkDicovery.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.gpui.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tcStatistics.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbxNetwork
@@ -152,6 +152,34 @@
             this.tcNetworkDicovery.Text = "Network Discovery";
             this.tcNetworkDicovery.Click += new System.EventHandler(this.TcNetworkDicovery_Click);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label3);
+            this.groupBox5.Controls.Add(this.tbxuserip);
+            this.groupBox5.Location = new System.Drawing.Point(702, 282);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(261, 144);
+            this.groupBox5.TabIndex = 107;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Elements";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 13);
+            this.label3.TabIndex = 104;
+            this.label3.Text = "Selected IP:";
+            // 
+            // tbxuserip
+            // 
+            this.tbxuserip.Location = new System.Drawing.Point(9, 46);
+            this.tbxuserip.Name = "tbxuserip";
+            this.tbxuserip.ReadOnly = true;
+            this.tbxuserip.Size = new System.Drawing.Size(171, 20);
+            this.tbxuserip.TabIndex = 105;
+            // 
             // gpui
             // 
             this.gpui.Controls.Add(this.tbxpassword);
@@ -164,23 +192,6 @@
             this.gpui.TabIndex = 106;
             this.gpui.TabStop = false;
             this.gpui.Text = "User Information";
-            // 
-            // tbxuserip
-            // 
-            this.tbxuserip.Location = new System.Drawing.Point(9, 46);
-            this.tbxuserip.Name = "tbxuserip";
-            this.tbxuserip.ReadOnly = true;
-            this.tbxuserip.Size = new System.Drawing.Size(171, 20);
-            this.tbxuserip.TabIndex = 105;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
-            this.label3.TabIndex = 104;
-            this.label3.Text = "Selected IP:";
             // 
             // tbxpassword
             // 
@@ -216,19 +227,19 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.comboBox7);
+            this.groupBox3.Controls.Add(this.cbNetworkAdapter);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.comboBox6);
+            this.groupBox3.Controls.Add(this.cbLogicalDisk);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.comboBox5);
+            this.groupBox3.Controls.Add(this.cbDiskDrive);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.comboBox4);
+            this.groupBox3.Controls.Add(this.cbComputerSystem);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.comboBox3);
-            this.groupBox3.Controls.Add(this.comboBox2);
+            this.groupBox3.Controls.Add(this.cbBaseBoard);
+            this.groupBox3.Controls.Add(this.cbAlternative);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.cbBIOS);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.groupBox4);
@@ -239,6 +250,203 @@
             this.groupBox3.TabIndex = 105;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Statistic";
+            // 
+            // cbNetworkAdapter
+            // 
+            this.cbNetworkAdapter.FormattingEnabled = true;
+            this.cbNetworkAdapter.Items.AddRange(new object[] {
+            "Description",
+            "Manufacturer",
+            "MacAddress",
+            "Name",
+            "Adaptertype",
+            "Installed",
+            "All"});
+            this.cbNetworkAdapter.Location = new System.Drawing.Point(387, 41);
+            this.cbNetworkAdapter.Name = "cbNetworkAdapter";
+            this.cbNetworkAdapter.Size = new System.Drawing.Size(121, 20);
+            this.cbNetworkAdapter.TabIndex = 122;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(387, 27);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 13);
+            this.label11.TabIndex = 121;
+            this.label11.Text = "Network Adapter:";
+            // 
+            // cbLogicalDisk
+            // 
+            this.cbLogicalDisk.FormattingEnabled = true;
+            this.cbLogicalDisk.Items.AddRange(new object[] {
+            "Caption",
+            "FileSystem",
+            "Size",
+            "All"});
+            this.cbLogicalDisk.Location = new System.Drawing.Point(260, 80);
+            this.cbLogicalDisk.Name = "cbLogicalDisk";
+            this.cbLogicalDisk.Size = new System.Drawing.Size(121, 20);
+            this.cbLogicalDisk.TabIndex = 120;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(262, 64);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(72, 13);
+            this.label10.TabIndex = 119;
+            this.label10.Text = "Logical Disk:";
+            // 
+            // cbDiskDrive
+            // 
+            this.cbDiskDrive.FormattingEnabled = true;
+            this.cbDiskDrive.Items.AddRange(new object[] {
+            "Caption",
+            "MediaLoaded",
+            "Status",
+            "Size",
+            "All"});
+            this.cbDiskDrive.Location = new System.Drawing.Point(260, 41);
+            this.cbDiskDrive.Name = "cbDiskDrive";
+            this.cbDiskDrive.Size = new System.Drawing.Size(121, 20);
+            this.cbDiskDrive.TabIndex = 118;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(262, 25);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 13);
+            this.label9.TabIndex = 117;
+            this.label9.Text = "Diskdrive:";
+            // 
+            // cbComputerSystem
+            // 
+            this.cbComputerSystem.FormattingEnabled = true;
+            this.cbComputerSystem.Items.AddRange(new object[] {
+            "Adminpasswortstatus",
+            "CurrentTimeZone",
+            "DNSHostname",
+            "PrimaryOwner",
+            "Name",
+            "Status",
+            "Workgroup",
+            "All"});
+            this.cbComputerSystem.Location = new System.Drawing.Point(133, 80);
+            this.cbComputerSystem.Name = "cbComputerSystem";
+            this.cbComputerSystem.Size = new System.Drawing.Size(121, 20);
+            this.cbComputerSystem.TabIndex = 116;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(134, 64);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 13);
+            this.label8.TabIndex = 115;
+            this.label8.Text = "Computersystem:";
+            // 
+            // cbBaseBoard
+            // 
+            this.cbBaseBoard.FormattingEnabled = true;
+            this.cbBaseBoard.Items.AddRange(new object[] {
+            "Manufacturer",
+            "Serialnumber",
+            "Status",
+            "All"});
+            this.cbBaseBoard.Location = new System.Drawing.Point(133, 41);
+            this.cbBaseBoard.Name = "cbBaseBoard";
+            this.cbBaseBoard.Size = new System.Drawing.Size(121, 20);
+            this.cbBaseBoard.TabIndex = 114;
+            // 
+            // cbAlternative
+            // 
+            this.cbAlternative.FormattingEnabled = true;
+            this.cbAlternative.Items.AddRange(new object[] {
+            "Lastbootuptime",
+            "Timezonedescription",
+            "Systemtimezonesetting",
+            "All"});
+            this.cbAlternative.Location = new System.Drawing.Point(390, 80);
+            this.cbAlternative.Name = "cbAlternative";
+            this.cbAlternative.Size = new System.Drawing.Size(121, 20);
+            this.cbAlternative.TabIndex = 113;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(387, 64);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(133, 13);
+            this.label7.TabIndex = 112;
+            this.label7.Text = "Alternative Informations: ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(134, 25);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 13);
+            this.label6.TabIndex = 111;
+            this.label6.Text = "Baseboard:";
+            // 
+            // cbBIOS
+            // 
+            this.cbBIOS.FormattingEnabled = true;
+            this.cbBIOS.Items.AddRange(new object[] {
+            "Manufacturer",
+            "Version",
+            "Status",
+            "All"});
+            this.cbBIOS.Location = new System.Drawing.Point(6, 80);
+            this.cbBIOS.Name = "cbBIOS";
+            this.cbBIOS.Size = new System.Drawing.Size(121, 20);
+            this.cbBIOS.TabIndex = 110;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 64);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(31, 13);
+            this.label5.TabIndex = 109;
+            this.label5.Text = "BIOS";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 13);
+            this.label4.TabIndex = 104;
+            this.label4.Text = "Operating System:";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.cb);
+            this.groupBox4.Location = new System.Drawing.Point(679, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(121, 97);
+            this.groupBox4.TabIndex = 108;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Action";
+            // 
+            // cboperatingsystem
+            // 
+            this.cboperatingsystem.FormattingEnabled = true;
+            this.cboperatingsystem.Items.AddRange(new object[] {
+            "Name",
+            "Architecture",
+            "Install Date",
+            "Registered User",
+            "Version",
+            "Status",
+            "All"});
+            this.cboperatingsystem.Location = new System.Drawing.Point(6, 41);
+            this.cboperatingsystem.Name = "cboperatingsystem";
+            this.cboperatingsystem.Size = new System.Drawing.Size(121, 20);
+            this.cboperatingsystem.TabIndex = 107;
             // 
             // groupBox2
             // 
@@ -394,6 +602,30 @@
             this.tcStatistics.TabIndex = 3;
             this.tcStatistics.Text = "Statistics";
             // 
+            // lvstatistics
+            // 
+            this.lvstatistics.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Property,
+            this.Result});
+            this.lvstatistics.GridLines = true;
+            this.lvstatistics.HideSelection = false;
+            this.lvstatistics.Location = new System.Drawing.Point(16, 25);
+            this.lvstatistics.Name = "lvstatistics";
+            this.lvstatistics.Size = new System.Drawing.Size(1282, 520);
+            this.lvstatistics.TabIndex = 101;
+            this.lvstatistics.UseCompatibleStateImageBehavior = false;
+            this.lvstatistics.View = System.Windows.Forms.View.Details;
+            // 
+            // Property
+            // 
+            this.Property.Text = "Property";
+            this.Property.Width = 113;
+            // 
+            // Result
+            // 
+            this.Result.Text = "Result";
+            this.Result.Width = 155;
+            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.Blue;
@@ -426,67 +658,6 @@
             this.panel1.Size = new System.Drawing.Size(1307, 10);
             this.panel1.TabIndex = 96;
             // 
-            // cboperatingsystem
-            // 
-            this.cboperatingsystem.FormattingEnabled = true;
-            this.cboperatingsystem.Items.AddRange(new object[] {
-            "Name",
-            "Architecture",
-            "Install Date",
-            "Registered User",
-            "Version",
-            "Status",
-            "All"});
-            this.cboperatingsystem.Location = new System.Drawing.Point(6, 41);
-            this.cboperatingsystem.Name = "cboperatingsystem";
-            this.cboperatingsystem.Size = new System.Drawing.Size(121, 20);
-            this.cboperatingsystem.TabIndex = 107;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.cb);
-            this.groupBox4.Location = new System.Drawing.Point(679, 12);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(121, 97);
-            this.groupBox4.TabIndex = 108;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Action";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Controls.Add(this.tbxuserip);
-            this.groupBox5.Location = new System.Drawing.Point(702, 282);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(261, 144);
-            this.groupBox5.TabIndex = 107;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Elements";
-            // 
-            // lvstatistics
-            // 
-            this.lvstatistics.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Property,
-            this.Result});
-            this.lvstatistics.GridLines = true;
-            this.lvstatistics.HideSelection = false;
-            this.lvstatistics.Location = new System.Drawing.Point(16, 25);
-            this.lvstatistics.Name = "lvstatistics";
-            this.lvstatistics.Size = new System.Drawing.Size(1282, 520);
-            this.lvstatistics.TabIndex = 101;
-            this.lvstatistics.UseCompatibleStateImageBehavior = false;
-            this.lvstatistics.View = System.Windows.Forms.View.Details;
-            // 
-            // Property
-            // 
-            this.Property.Text = "Property";
-            this.Property.Width = 113;
-            // 
-            // Result
-            // 
-            this.Result.Text = "Result";
-            this.Result.Width = 155;
-            // 
             // cb
             // 
             this.cb.BackgroundImage = global::Management_Tool_SZU.Server.GUI.Properties.Resources.morphobutton;
@@ -497,134 +668,6 @@
             this.cb.TabIndex = 106;
             this.cb.UseVisualStyleBackColor = true;
             this.cb.Click += new System.EventHandler(this.Cb_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 13);
-            this.label4.TabIndex = 104;
-            this.label4.Text = "Operating System:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
-            this.label5.TabIndex = 109;
-            this.label5.Text = "BIOS";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 80);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 110;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(134, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(64, 13);
-            this.label6.TabIndex = 111;
-            this.label6.Text = "Baseboard:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(387, 64);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(133, 13);
-            this.label7.TabIndex = 112;
-            this.label7.Text = "Alternative Informations: ";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(390, 80);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 20);
-            this.comboBox2.TabIndex = 113;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(133, 41);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 20);
-            this.comboBox3.TabIndex = 114;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(134, 64);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 13);
-            this.label8.TabIndex = 115;
-            this.label8.Text = "Computersystem:";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(133, 80);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 20);
-            this.comboBox4.TabIndex = 116;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(262, 25);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 13);
-            this.label9.TabIndex = 117;
-            this.label9.Text = "Diskdrive:";
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(260, 41);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 20);
-            this.comboBox5.TabIndex = 118;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(262, 64);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 13);
-            this.label10.TabIndex = 119;
-            this.label10.Text = "Logical Disk:";
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(260, 80);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 20);
-            this.comboBox6.TabIndex = 120;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(387, 27);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 13);
-            this.label11.TabIndex = 121;
-            this.label11.Text = "Network Adapter:";
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(387, 41);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(121, 20);
-            this.comboBox7.TabIndex = 122;
             // 
             // Form1
             // 
@@ -638,19 +681,19 @@
             this.Load += new System.EventHandler(this.ServerSettings_Load);
             this.tcWindow.ResumeLayout(false);
             this.tcNetworkDicovery.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.gpui.ResumeLayout(false);
             this.gpui.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tcStatistics.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -697,18 +740,18 @@
         private System.Windows.Forms.ColumnHeader Result;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbBIOS;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbAlternative;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cbBaseBoard;
+        private System.Windows.Forms.ComboBox cbComputerSystem;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox6;
+        private System.Windows.Forms.ComboBox cbLogicalDisk;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cbDiskDrive;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox cbNetworkAdapter;
         private System.Windows.Forms.Label label11;
     }
 }
