@@ -137,7 +137,7 @@ namespace Management_Tool_SZU.Server.GUI
             /*/
         }
 
-        private void GetStatisticForm(IPAddress ip)
+        private void GetStatisticForm(string ip)
         {
           /*/  if (this.lsb_discover.SelectedIndex == -1)
             {
@@ -188,127 +188,137 @@ namespace Management_Tool_SZU.Server.GUI
 
         private void GiveIntoListview(string wmicvalue)
         {
-            string[] values = SplitIncominMessage(wmicvalue);
-            ListViewItem lvi = new ListViewItem(values[0]);
-            lvi.SubItems.Add(values[1]);
-            lvstatistics.Items.Add(lvi);
+            try
+            {
+                string[] values = SplitIncominMessage(wmicvalue);
+                ListViewItem lvi = new ListViewItem(values[0]);
+                lvi.SubItems.Add(values[1]);
+                lvstatistics.Items.Add(lvi);
+
+            }
+            catch (Exception)
+            {
+
+                
+            }
+            
         }
 
-        private void WMICAction(IPAddress ip)
+        private void WMICAction(string ip)
         {
             // OS
             if (cboperatingsystem.Text == "All")
             {
-                string OperatingSystemName = wmics.GetStatistic(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemName = wmics.GetStatistic(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemName);
 
-                string OperatingSystemArchitecture = wmics.GetStatistic30(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemArchitecture = wmics.GetStatistic30(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemArchitecture);
 
-                string OperatingSystemInstallDate = wmics.GetStatistic31(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemInstallDate = wmics.GetStatistic31(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemInstallDate);
 
-                string OperatingSystemRegisteredUser = wmics.GetStatistic32(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemRegisteredUser = wmics.GetStatistic32(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemRegisteredUser);
 
-                string OperatingSystemVersion = wmics.GetStatistic33(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemVersion = wmics.GetStatistic33(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemVersion);
 
-                string OperatingSystemStatus = wmics.GetStatistic34(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemStatus = wmics.GetStatistic34(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemStatus);
             }
             if (cboperatingsystem.Text == "Name")
             {
-                string OperatingSystemName = wmics.GetStatistic(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemName = wmics.GetStatistic(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemName);
             }
             if (cboperatingsystem.Text == "Architecture")
             {
-                string OperatingSystemArchitecture = wmics.GetStatistic30(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemArchitecture = wmics.GetStatistic30(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemArchitecture);
             }
             if (cboperatingsystem.Text == "Registered User")
             {
-                string OperatingSystemArchitecture = wmics.GetStatistic30(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemArchitecture = wmics.GetStatistic30(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemArchitecture);
             }
             if (cboperatingsystem.Text == "Install Date")
             {
-                string OperatingSystemInstallDate = wmics.GetStatistic31(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemInstallDate = wmics.GetStatistic31(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemInstallDate);
             }
             if (cboperatingsystem.Text == "Version")
             {
-                string OperatingSystemVersion = wmics.GetStatistic33(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemVersion = wmics.GetStatistic33(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemVersion);
             }
             if (cboperatingsystem.Text == "Status")
             {
-                string OperatingSystemStatus = wmics.GetStatistic34(Convert.ToString(ip), tbxusername.Text, tbxpassword.Text);
+                string OperatingSystemStatus = wmics.GetStatistic34(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemStatus);
             }
 
             //BIOS
             if (cbBIOS.Text == "All")
             {
-                string BIOSVersion = wmics.GetStatistic6(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string BIOSVersion = wmics.GetStatistic6(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(BIOSVersion);
 
-                string BIOSManufacturer = wmics.GetStatistic7(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string BIOSManufacturer = wmics.GetStatistic7(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(BIOSManufacturer);
 
-                string BIOSStatus = wmics.GetStatistic8(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string BIOSStatus = wmics.GetStatistic8(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(BIOSStatus);
             }
             if (cbBIOS.Text == "Version")
             {
-                string BIOSVersion = wmics.GetStatistic6(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string BIOSVersion = wmics.GetStatistic6(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(BIOSVersion);
             }
             if (cbBIOS.Text == "Manufacturer")
             {
-                string BIOSManufacturer = wmics.GetStatistic7(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string BIOSManufacturer = wmics.GetStatistic7(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(BIOSManufacturer);
             }
             if (cbBIOS.Text == "Status")
             {
-                string BIOSStatus = wmics.GetStatistic8(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string BIOSStatus = wmics.GetStatistic8(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(BIOSStatus);
             }
 
             //BaseBoard
             if (cbBaseBoard.Text == "All")
             {
-                string baseboardmanufacturer = wmics.GetStatistic2(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string baseboardmanufacturer = wmics.GetStatistic2(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(baseboardmanufacturer);
 
-                string baseboardserialnumber = wmics.GetStatistic3(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string baseboardserialnumber = wmics.GetStatistic3(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(baseboardserialnumber);
 
-                string baseboardstatus = wmics.GetStatistic4(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string baseboardstatus = wmics.GetStatistic4(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(baseboardstatus);
 
-                string baseboardproduct = wmics.GetStatistic5(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string baseboardproduct = wmics.GetStatistic5(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(baseboardproduct);
             }
             if (cbBaseBoard.Text == "Manufacturer")
             {
-                string baseboardmanufacturer = wmics.GetStatistic2(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string baseboardmanufacturer = wmics.GetStatistic2(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(baseboardmanufacturer);
             }
             if (cbBaseBoard.Text == "Serialnumber")
             {
-                string baseboardserialnumber = wmics.GetStatistic3(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string baseboardserialnumber = wmics.GetStatistic3(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(baseboardserialnumber);
             }
             if (cbBaseBoard.Text == "Status")
             {
-                string baseboardstatus = wmics.GetStatistic4(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string baseboardstatus = wmics.GetStatistic4(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(baseboardstatus);
             }
             if (cbBaseBoard.Text == "Product")
             {
-                string baseboardproduct = wmics.GetStatistic5(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string baseboardproduct = wmics.GetStatistic5(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(baseboardproduct);
             }
 
@@ -542,11 +552,13 @@ namespace Management_Tool_SZU.Server.GUI
         
         private void All_Click(object sender, EventArgs e)
         {
-            ipAddressList2.Add(IPAddress.Parse("192.168.0.2"));
-            ipAddressList2.Add(IPAddress.Parse("192.168.0.5"));
-            foreach (IPAddress item in ipAddressList2)
+            //ipAddressList2.Add(IPAddress.Parse("192.168.0.2"));
+            //ipAddressList2.Add(IPAddress.Parse("192.168.0.5"));
+            foreach (String item in lsb_discover.Items)
             {
-                GetStatisticForm(item);
+                Thread thread = new Thread(delegate () { GetStatisticForm(item); } ) ;
+                thread.Start();
+                //GetStatisticForm(item);
                 tcWindow.SelectedIndex = 1;
             }
             

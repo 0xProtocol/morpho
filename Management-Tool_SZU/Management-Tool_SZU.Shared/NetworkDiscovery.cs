@@ -42,7 +42,7 @@ namespace Management_Tool_SZU.Shared
                     string subnetmsk = Convert.ToString(UnicatIPInfo.IPv4Mask);
                     if (ipaddress.StartsWith("169")) continue;
                     if (subnetmsk.StartsWith("0")) continue;
-                    if (desc.StartsWith("VirtualBox")) continue;
+                    //if (desc.StartsWith("VirtualBox")) continue;
                     lst.Items.Add(desc + " | " + ipaddress + " | " + subnetmsk);
                     firstvalue = (desc + "|" + ipaddress + "|" + subnetmsk);
                 }
