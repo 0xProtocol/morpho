@@ -149,14 +149,14 @@ namespace Management_Tool_SZU.Server.GUI
                 }
                 ipAddressList2.Clear();
             }
-          /*/  ThreadStart ts = new ThreadStart(GetStatisticForm);
-            Thread t = new Thread(ts)
+            else
             {
-                IsBackground = true
-            };
-            t.Start();
-            tcWindow.SelectedIndex = 1;
-            /*/
+                Thread thread = new Thread(delegate () { GetStatisticForm(Convert.ToString(tbxuserip.Text)); });
+                thread.Start();
+                tcWindow.SelectedIndex = 1;
+            }
+
+           
         }
 
         private void GetStatisticForm(string ip)

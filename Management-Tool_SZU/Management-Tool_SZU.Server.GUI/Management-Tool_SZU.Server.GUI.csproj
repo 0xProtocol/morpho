@@ -97,6 +97,7 @@
     <None Include="bin\Debug\morpho2.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bin\Debug\GongSolutions.Wpf.DragDrop.dll.jpg" />
     <Content Include="bin\Debug\morphobutton.jpg" />
     <None Include="morphit.jpg" />
     <None Include="network.gif" />
