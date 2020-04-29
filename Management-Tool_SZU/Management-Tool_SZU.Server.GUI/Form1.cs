@@ -552,11 +552,11 @@ namespace Management_Tool_SZU.Server.GUI
         
         private void All_Click(object sender, EventArgs e)
         {
-            //ipAddressList2.Add(IPAddress.Parse("192.168.0.2"));
-            //ipAddressList2.Add(IPAddress.Parse("192.168.0.5"));
-            foreach (String item in lsb_discover.Items)
+            ipAddressList2.Add(IPAddress.Parse("192.168.0.2"));
+            ipAddressList2.Add(IPAddress.Parse("192.168.0.4"));
+            foreach (IPAddress item in ipAddressList2)
             {
-                Thread thread = new Thread(delegate () { GetStatisticForm(item); } ) ;
+                Thread thread = new Thread(delegate () { GetStatisticForm(Convert.ToString(item)); } ) ;
                 thread.Start();
                 //GetStatisticForm(item);
                 tcWindow.SelectedIndex = 1;
