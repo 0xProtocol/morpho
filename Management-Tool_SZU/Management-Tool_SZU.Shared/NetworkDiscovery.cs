@@ -111,7 +111,7 @@ namespace Management_Tool_SZU.Shared
         }
         #endregion
         #region QuickSearch
-        public void QuickSearch(ListBox lst, ProgressBar pb)
+        public void QuickSearch(ListBox lst, ProgressBar pb,CheckBox cb)
         {
             pb.Value = 0;
             foreach (IPAddress ip in ipAddressList)
@@ -124,6 +124,7 @@ namespace Management_Tool_SZU.Shared
 
             }
             isworking = false;
+            cb.Enabled = true;
         }
         private void SendArpRequestQuickSearch(IPAddress dst, ListBox lst)
         {

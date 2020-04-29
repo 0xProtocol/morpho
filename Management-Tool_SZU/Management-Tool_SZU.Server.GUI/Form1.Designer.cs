@@ -64,7 +64,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.cb = new Management_Tool_SZU.Server.GUI.CircularButton();
             this.cboperatingsystem = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Discover = new System.Windows.Forms.Button();
@@ -98,6 +97,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cb = new Management_Tool_SZU.Server.GUI.CircularButton();
             this.tcWindow.SuspendLayout();
             this.tcNetworkDicovery.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -328,6 +328,7 @@
             // cbAllIPs
             // 
             this.cbAllIPs.AutoSize = true;
+            this.cbAllIPs.Enabled = false;
             this.cbAllIPs.Location = new System.Drawing.Point(597, 18);
             this.cbAllIPs.Margin = new System.Windows.Forms.Padding(2);
             this.cbAllIPs.Name = "cbAllIPs";
@@ -411,7 +412,7 @@
             this.cbDiskDrive.FormattingEnabled = true;
             this.cbDiskDrive.Items.AddRange(new object[] {
             "Caption",
-            "MediaLoaded",
+            "Media Loaded",
             "Status",
             "Size",
             "All",
@@ -464,6 +465,7 @@
             "Manufacturer",
             "Serialnumber",
             "Status",
+            "Product",
             "All",
             " "});
             this.cbBaseBoard.Location = new System.Drawing.Point(133, 41);
@@ -544,18 +546,6 @@
             this.groupBox4.TabIndex = 108;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Action";
-            // 
-            // cb
-            // 
-            this.cb.BackgroundImage = global::Management_Tool_SZU.Server.GUI.Properties.Resources.GongSolutions_Wpf_DragDrop_dll;
-            this.cb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.cb.Font = new System.Drawing.Font("Rockwell", 10F);
-            this.cb.Location = new System.Drawing.Point(20, 15);
-            this.cb.Name = "cb";
-            this.cb.Size = new System.Drawing.Size(79, 76);
-            this.cb.TabIndex = 106;
-            this.cb.UseVisualStyleBackColor = true;
-            this.cb.Click += new System.EventHandler(this.Cb_Click);
             // 
             // cboperatingsystem
             // 
@@ -909,6 +899,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1307, 10);
             this.panel1.TabIndex = 96;
+            // 
+            // cb
+            // 
+            this.cb.BackgroundImage = global::Management_Tool_SZU.Server.GUI.Properties.Resources.GongSolutions_Wpf_DragDrop_dll;
+            this.cb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cb.Font = new System.Drawing.Font("Rockwell", 10F);
+            this.cb.Location = new System.Drawing.Point(20, 15);
+            this.cb.Name = "cb";
+            this.cb.Size = new System.Drawing.Size(79, 76);
+            this.cb.TabIndex = 106;
+            this.cb.UseVisualStyleBackColor = true;
+            this.cb.Click += new System.EventHandler(this.Cb_Click);
             // 
             // Form1
             // 

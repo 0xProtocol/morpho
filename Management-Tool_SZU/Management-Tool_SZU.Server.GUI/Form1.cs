@@ -67,7 +67,7 @@ namespace Management_Tool_SZU.Server.GUI
                 lsb_discover.Items.Clear();
                 nd.FillArpResults(tbx_Discovery, lsb_discover);
 
-                ThreadStart start = delegate { nd.QuickSearch(lsb_discover, pbnetwork); };
+                ThreadStart start = delegate { nd.QuickSearch(lsb_discover, pbnetwork, cbAllIPs); };
                 discoverythread = new Thread(new ThreadStart(start));
                 discoverythread.Start();
 
@@ -207,16 +207,58 @@ namespace Management_Tool_SZU.Server.GUI
 
             return tmp;
         }
-
+        int counter = 0;
         private void GiveIntoListview(string wmicvalue)
         {
             try
             {
                 string[] values = SplitIncominMessage(wmicvalue);
-                ListViewItem lvi = new ListViewItem(values[0]);
-                lvi.SubItems.Add(values[1]);
-                lvstatistics.Items.Add(lvi);
 
+                if(values.Length==2)
+                {
+                    ListViewItem lvi = new ListViewItem(values[0]);
+                    lvi.SubItems.Add(values[1]);
+                    lvstatistics.Items.Add(lvi);
+                }
+                if(values.Length==3)
+                {
+                    if (counter == 0)
+                    {
+                        lvstatistics.Columns.Add("Result", 155, HorizontalAlignment.Left);
+                        ListViewItem lvi = new ListViewItem(values[0]);
+                        lvi.SubItems.Add(values[1]);
+                        lvi.SubItems.Add(values[2]);
+                        lvstatistics.Items.Add(lvi);
+                        counter++;
+                    }
+                   else if (counter >=1)
+                    {
+                        ListViewItem lvi = new ListViewItem(values[0]);
+                        lvi.SubItems.Add(values[1]);
+                        lvi.SubItems.Add(values[2]);
+                        lvstatistics.Items.Add(lvi);
+                    }
+                }
+                // Änderung
+                if (values.Length == 4)
+                {
+                    lvstatistics.Columns.Add("Result", 155, HorizontalAlignment.Left);
+                    ListViewItem lvi = new ListViewItem(values[0]);
+                    lvi.SubItems.Add(values[1]);
+                    lvi.SubItems.Add(values[2]);
+                    lvi.SubItems.Add(values[3]);
+                    lvstatistics.Items.Add(lvi);
+                }
+                if (values.Length == 5)
+                {
+                    lvstatistics.Columns.Add("Result", 155, HorizontalAlignment.Left);
+                    ListViewItem lvi = new ListViewItem(values[0]);
+                    lvi.SubItems.Add(values[1]);
+                    lvi.SubItems.Add(values[2]);
+                    lvi.SubItems.Add(values[3]);
+                    lvi.SubItems.Add(values[4]);
+                    lvstatistics.Items.Add(lvi);
+                }
             }
             catch (Exception)
             {
@@ -261,8 +303,8 @@ namespace Management_Tool_SZU.Server.GUI
             }
             if (cboperatingsystem.Text == "Registered User")
             {
-                string OperatingSystemArchitecture = wmics.GetStatistic30(ip, tbxusername.Text, tbxpassword.Text);
-                GiveIntoListview(OperatingSystemArchitecture);
+                string OperatingSystemRegisteredUser = wmics.GetStatistic32(ip, tbxusername.Text, tbxpassword.Text);
+                GiveIntoListview(OperatingSystemRegisteredUser);
             }
             if (cboperatingsystem.Text == "Install Date")
             {
@@ -429,7 +471,7 @@ namespace Management_Tool_SZU.Server.GUI
                 GiveIntoListview(DiskDriveCaption);
 
             }
-            if (cbDiskDrive.Text == "MeidaLoaded")
+            if (cbDiskDrive.Text == "Media Loaded")
             {
                 string DiskDriveMediaLoaded = wmics.GetStatistic17(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(DiskDriveMediaLoaded);
@@ -457,7 +499,7 @@ namespace Management_Tool_SZU.Server.GUI
                 string LogicalDiskSize = wmics.GetStatistic23(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(LogicalDiskSize);
             }
-            if (cbLogicalDisk.Text == "Catption")
+            if (cbLogicalDisk.Text == "Caption")
             {
                 string LogicalDiskCaption = wmics.GetStatistic21(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(LogicalDiskCaption);
