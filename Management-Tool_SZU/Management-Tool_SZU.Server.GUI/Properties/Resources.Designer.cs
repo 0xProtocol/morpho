@@ -63,6 +63,26 @@ namespace Management_Tool_SZU.Server.GUI.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap morphit {
+            get {
+                object obj = ResourceManager.GetObject("morphit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap morphit1 {
+            get {
+                object obj = ResourceManager.GetObject("morphit1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap morpho2 {
             get {
                 object obj = ResourceManager.GetObject("morpho2", resourceCulture);
@@ -76,6 +96,16 @@ namespace Management_Tool_SZU.Server.GUI.Properties {
         internal static System.Drawing.Bitmap morphobutton {
             get {
                 object obj = ResourceManager.GetObject("morphobutton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap network {
+            get {
+                object obj = ResourceManager.GetObject("network", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

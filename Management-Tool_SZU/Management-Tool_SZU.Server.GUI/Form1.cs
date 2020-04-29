@@ -24,6 +24,12 @@ namespace Management_Tool_SZU.Server.GUI
             cbNetworkAdapter.SelectedIndex = 0;
             cboperatingsystem.SelectedIndex = 0;
             tbxpassword.PasswordChar = '*';
+            if (lsb_networkadapter.SelectedIndex == -1)
+            {
+                lblCheck1.ForeColor = System.Drawing.Color.Black;
+            }
+
+
         }
 
         private SpeechSynthesizer com = new SpeechSynthesizer();
@@ -73,6 +79,7 @@ namespace Management_Tool_SZU.Server.GUI
 
         private void Btn_Discover_Click_1(object sender, EventArgs e)
         {
+            lblCheck2.ForeColor = System.Drawing.Color.Black;
             if (nd.isworking == false)
             {
                 Discover("0");
@@ -127,6 +134,21 @@ namespace Management_Tool_SZU.Server.GUI
 
         private void Cb_Click(object sender, EventArgs e)
         {
+            lblCheck5.ForeColor = System.Drawing.Color.Black;
+            if(cbAllIPs.Checked == true)
+            {
+                foreach (string item in lsb_discover.Items)
+                {
+                    ipAddressList2.Add(IPAddress.Parse(item));
+                }
+                foreach (IPAddress item in ipAddressList2)
+                {
+                    Thread thread = new Thread(delegate () { GetStatisticForm(Convert.ToString(item)); });
+                    thread.Start();
+                    tcWindow.SelectedIndex = 1;
+                }
+                ipAddressList2.Clear();
+            }
           /*/  ThreadStart ts = new ThreadStart(GetStatisticForm);
             Thread t = new Thread(ts)
             {
@@ -552,17 +574,7 @@ namespace Management_Tool_SZU.Server.GUI
         
         private void All_Click(object sender, EventArgs e)
         {
-            foreach (string item in lsb_discover.Items)
-            {
-                ipAddressList2.Add(IPAddress.Parse(item));
-            }
-            foreach (IPAddress item in ipAddressList2)
-            {
-                Thread thread = new Thread(delegate () { GetStatisticForm(Convert.ToString(item)); } ) ;
-                thread.Start();
-                tcWindow.SelectedIndex = 1;
-            }
-            ipAddressList2.Clear();
+            
             
         }
 
@@ -576,6 +588,42 @@ namespace Management_Tool_SZU.Server.GUI
             cbLogicalDisk.SelectedIndex = cbLogicalDisk.Items.Count - 1;
             cbNetworkAdapter.SelectedIndex = cbNetworkAdapter.Items.Count - 1;
             cboperatingsystem.SelectedIndex = cboperatingsystem.Items.Count - 1;
+        }
+
+        private void cbAllIPs_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbAllIPs.Checked == true)
+            {
+                lblCheck4.ForeColor = System.Drawing.Color.Black;
+            }
+            if (cbAllIPs.Checked != true)
+            {
+                lblCheck4.ForeColor = System.Drawing.Color.DodgerBlue;
+            }
+        }
+
+        private void tbxusername_TextChanged(object sender, EventArgs e)
+        {
+            if (tbxusername.TextLength == 0 || tbxpassword.TextLength == 0)
+            {
+                lblCheck3.ForeColor = System.Drawing.Color.DodgerBlue;
+            }
+            if (tbxusername.TextLength != 0 && tbxpassword.TextLength != 0)
+            {
+                lblCheck3.ForeColor = System.Drawing.Color.Black;
+            }
+        }
+
+        private void tbxpassword_TextChanged(object sender, EventArgs e)
+        {
+            if (tbxusername.TextLength == 0 || tbxpassword.TextLength == 0)
+            {
+                lblCheck3.ForeColor = System.Drawing.Color.DodgerBlue;
+            }
+            if (tbxusername.TextLength != 0 && tbxpassword.TextLength != 0)
+            {
+                lblCheck3.ForeColor = System.Drawing.Color.Black;
+            }
         }
     }
 }

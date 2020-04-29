@@ -11,3 +11,6 @@ D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Client.UI\bin\Debug\Man
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Client.UI\obj\Debug\Management-Tool_SZU.Client.UI.csproj.CoreCompileInputs.cache
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Client.UI\obj\Debug\Management-Tool_SZU.Client.UI.exe
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Client.UI\obj\Debug\Management-Tool_SZU.Client.UI.pdb
+C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Client.UI\bin\Debug\Management-Tool_SZU.Client.UI.exe.config
+C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Client.UI\obj\Debug\Management-Tool_SZU.Client.UI.exe
+C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Client.UI\obj\Debug\Management-Tool_SZU.Client.UI.pdb
