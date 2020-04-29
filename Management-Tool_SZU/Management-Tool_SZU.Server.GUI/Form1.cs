@@ -325,62 +325,62 @@ namespace Management_Tool_SZU.Server.GUI
             // ComputerSystem
             if (cbComputerSystem.Text == "All")
             {
-                string ComputersystemAdminPasswortStatus = wmics.GetStatistic9(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string ComputersystemAdminPasswortStatus = wmics.GetStatistic9(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(ComputersystemAdminPasswortStatus);
 
-                string ComputersystemCurrentTimeZone = wmics.GetStatistic10(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string ComputersystemCurrentTimeZone = wmics.GetStatistic10(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(ComputersystemCurrentTimeZone);
 
-                string ComputersystemDNSHostname = wmics.GetStatistic11(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string ComputersystemDNSHostname = wmics.GetStatistic11(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(ComputersystemDNSHostname);
 
-                string ComputersystemPrimaryOwner = wmics.GetStatistic12(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string ComputersystemPrimaryOwner = wmics.GetStatistic12(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(ComputersystemPrimaryOwner);
 
-                string ComputersystemName = wmics.GetStatistic13(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string ComputersystemName = wmics.GetStatistic13(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(ComputersystemName);
 
-                string ComputersystemStatus = wmics.GetStatistic14(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string ComputersystemStatus = wmics.GetStatistic14(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(ComputersystemStatus);
 
-                string ComputersystemWorkgroup = wmics.GetStatistic15(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string ComputersystemWorkgroup = wmics.GetStatistic15(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(ComputersystemWorkgroup);
             }
             if (cbComputerSystem.Text == "Adminpasswortstatus")
             {
-                string ComputersystemAdminPasswortStatus = wmics.GetStatistic9(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string ComputersystemAdminPasswortStatus = wmics.GetStatistic9(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(ComputersystemAdminPasswortStatus);
             }
             if (cbComputerSystem.Text == "CurrentTimeZone")
             {
 
-                string ComputersystemCurrentTimeZone = wmics.GetStatistic10(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string ComputersystemCurrentTimeZone = wmics.GetStatistic10(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(ComputersystemCurrentTimeZone);
             }
             if (cbComputerSystem.Text == "DNSHostname")
             {
-                string ComputersystemDNSHostname = wmics.GetStatistic11(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string ComputersystemDNSHostname = wmics.GetStatistic11(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(ComputersystemDNSHostname);
             }
             if (cbComputerSystem.Text == "PrimaryOwner")
             {
-                string ComputersystemPrimaryOwner = wmics.GetStatistic12(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string ComputersystemPrimaryOwner = wmics.GetStatistic12(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(ComputersystemPrimaryOwner);
 
             }
             if (cbComputerSystem.Text == "Name")
             {
-                string ComputersystemName = wmics.GetStatistic13(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string ComputersystemName = wmics.GetStatistic13(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(ComputersystemName);
             }
             if (cbComputerSystem.Text == "Status")
             {
-                string ComputersystemStatus = wmics.GetStatistic14(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string ComputersystemStatus = wmics.GetStatistic14(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(ComputersystemStatus);
             }
             if (cbComputerSystem.Text == "Workgroup")
             {
-                string ComputersystemWorkgroup = wmics.GetStatistic15(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string ComputersystemWorkgroup = wmics.GetStatistic15(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(ComputersystemWorkgroup);
             }
 
@@ -388,148 +388,148 @@ namespace Management_Tool_SZU.Server.GUI
             //DiskDrive
             if (cbDiskDrive.Text == "All")
             {
-                string DiskDriveCaption = wmics.GetStatistic16(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string DiskDriveCaption = wmics.GetStatistic16(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(DiskDriveCaption);
 
-                string DiskDriveMediaLoaded = wmics.GetStatistic17(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string DiskDriveMediaLoaded = wmics.GetStatistic17(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(DiskDriveMediaLoaded);
 
-                string DiskDriveStatus = wmics.GetStatistic18(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string DiskDriveStatus = wmics.GetStatistic18(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(DiskDriveStatus);
 
-                string DiskDriveSize = wmics.GetStatistic19(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string DiskDriveSize = wmics.GetStatistic19(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(DiskDriveSize);
 
             }
             if (cbDiskDrive.Text == "Caption")
             {
-                string DiskDriveCaption = wmics.GetStatistic16(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string DiskDriveCaption = wmics.GetStatistic16(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(DiskDriveCaption);
 
             }
             if (cbDiskDrive.Text == "MeidaLoaded")
             {
-                string DiskDriveMediaLoaded = wmics.GetStatistic17(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string DiskDriveMediaLoaded = wmics.GetStatistic17(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(DiskDriveMediaLoaded);
             }
             if (cbDiskDrive.Text == "Status")
             {
-                string DiskDriveStatus = wmics.GetStatistic18(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string DiskDriveStatus = wmics.GetStatistic18(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(DiskDriveStatus);
             }
             if (cbDiskDrive.Text == "Size")
             {
-                string DiskDriveSize = wmics.GetStatistic19(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string DiskDriveSize = wmics.GetStatistic19(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(DiskDriveSize);
             }
 
             //LogicalDisk
             if (cbLogicalDisk.Text == "All")
             {
-                string LogicalDiskCaption = wmics.GetStatistic21(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string LogicalDiskCaption = wmics.GetStatistic21(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(LogicalDiskCaption);
 
-                string LogicalDiskFileSystem = wmics.GetStatistic22(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string LogicalDiskFileSystem = wmics.GetStatistic22(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(LogicalDiskFileSystem);
 
-                string LogicalDiskSize = wmics.GetStatistic23(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string LogicalDiskSize = wmics.GetStatistic23(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(LogicalDiskSize);
             }
             if (cbLogicalDisk.Text == "Catption")
             {
-                string LogicalDiskCaption = wmics.GetStatistic21(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string LogicalDiskCaption = wmics.GetStatistic21(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(LogicalDiskCaption);
 
             }
             if (cbLogicalDisk.Text == "FileSystem")
             {
-                string LogicalDiskFileSystem = wmics.GetStatistic22(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string LogicalDiskFileSystem = wmics.GetStatistic22(ip ,tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(LogicalDiskFileSystem);
             }
             if (cbLogicalDisk.Text == "Size")
             {
-                string LogicalDiskSize = wmics.GetStatistic23(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string LogicalDiskSize = wmics.GetStatistic23(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(LogicalDiskSize);
             }
 
             // Network Adapter
             if (cbNetworkAdapter.Text == "All")
             {
-                string NetworkAdapterDescription = wmics.GetStatistic24(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string NetworkAdapterDescription = wmics.GetStatistic24(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(NetworkAdapterDescription);
 
-                string NetworkAdapterManufacturer = wmics.GetStatistic25(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string NetworkAdapterManufacturer = wmics.GetStatistic25(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(NetworkAdapterManufacturer);
 
-                string NetworkAdapterMacAddress = wmics.GetStatistic26(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string NetworkAdapterMacAddress = wmics.GetStatistic26(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(NetworkAdapterMacAddress);
 
-                string NetworkAdapterName = wmics.GetStatistic27(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string NetworkAdapterName = wmics.GetStatistic27(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(NetworkAdapterName);
 
-                string NetworkAdapterAdaptertype = wmics.GetStatistic28(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string NetworkAdapterAdaptertype = wmics.GetStatistic28(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(NetworkAdapterAdaptertype);
 
-                string NetworkAdapterInstalled = wmics.GetStatistic29(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string NetworkAdapterInstalled = wmics.GetStatistic29(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(NetworkAdapterInstalled);
             }
             if (cbNetworkAdapter.Text == "Description")
             {
-                string NetworkAdapterDescription = wmics.GetStatistic24(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string NetworkAdapterDescription = wmics.GetStatistic24(ip ,tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(NetworkAdapterDescription);
             }
             if (cbNetworkAdapter.Text == "Manufacturer")
             {
-                string NetworkAdapterManufacturer = wmics.GetStatistic25(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string NetworkAdapterManufacturer = wmics.GetStatistic25(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(NetworkAdapterManufacturer);
             }
             if (cbNetworkAdapter.Text == "MacAddress")
             {
-                string NetworkAdapterMacAddress = wmics.GetStatistic26(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string NetworkAdapterMacAddress = wmics.GetStatistic26(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(NetworkAdapterMacAddress);
             }
             if (cbNetworkAdapter.Text == "Name")
             {
-                string NetworkAdapterName = wmics.GetStatistic27(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string NetworkAdapterName = wmics.GetStatistic27(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(NetworkAdapterName);
             }
             if (cbNetworkAdapter.Text == "Adaptertype")
             {
-                string NetworkAdapterAdaptertype = wmics.GetStatistic28(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string NetworkAdapterAdaptertype = wmics.GetStatistic28(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(NetworkAdapterAdaptertype);
 
             }
             if (cbNetworkAdapter.Text == "Installed")
             {
-                string NetworkAdapterInstalled = wmics.GetStatistic29(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string NetworkAdapterInstalled = wmics.GetStatistic29(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(NetworkAdapterInstalled);
             }
 
             //Alternative
             if(cbAlternative.Text=="All")
             {
-                string Lastbootuptime = wmics.GetStatistic20(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string Lastbootuptime = wmics.GetStatistic20(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(Lastbootuptime);
 
-                string TimeZoneDescription = wmics.GetStatistic35(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string TimeZoneDescription = wmics.GetStatistic35(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(TimeZoneDescription);
 
-                string SystemTimeZoneSetting = wmics.GetStatistic36(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string SystemTimeZoneSetting = wmics.GetStatistic36(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(SystemTimeZoneSetting);
             }
             if (cbAlternative.Text == "Lastbootuptime")
             {
-                string Lastbootuptime = wmics.GetStatistic20(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string Lastbootuptime = wmics.GetStatistic20(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(Lastbootuptime);
             }
             if (cbAlternative.Text == "Timezonedescription")
             {
-                string TimeZoneDescription = wmics.GetStatistic35(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string TimeZoneDescription = wmics.GetStatistic35(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(TimeZoneDescription);
             }
             if (cbAlternative.Text == "Systemtimezonesetting")
             {
-                string SystemTimeZoneSetting = wmics.GetStatistic36(tbxuserip.Text, tbxusername.Text, tbxpassword.Text);
+                string SystemTimeZoneSetting = wmics.GetStatistic36(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(SystemTimeZoneSetting);
             }
             else
