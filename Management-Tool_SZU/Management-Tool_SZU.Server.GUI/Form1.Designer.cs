@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbxusername = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.All = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.cbNetworkAdapter = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -82,7 +83,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.All = new System.Windows.Forms.Button();
+            this.btnNone = new System.Windows.Forms.Button();
             this.tcWindow.SuspendLayout();
             this.tcNetworkDicovery.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -229,6 +230,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnNone);
             this.groupBox3.Controls.Add(this.All);
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.cbNetworkAdapter);
@@ -254,6 +256,16 @@
             this.groupBox3.TabIndex = 105;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Statistic";
+            // 
+            // All
+            // 
+            this.All.Location = new System.Drawing.Point(514, 41);
+            this.All.Name = "All";
+            this.All.Size = new System.Drawing.Size(108, 21);
+            this.All.TabIndex = 124;
+            this.All.Text = "ALLIPS";
+            this.All.UseVisualStyleBackColor = true;
+            this.All.Click += new System.EventHandler(this.All_Click);
             // 
             // button1
             // 
@@ -695,15 +707,15 @@
             this.panel1.Size = new System.Drawing.Size(1307, 10);
             this.panel1.TabIndex = 96;
             // 
-            // All
+            // btnNone
             // 
-            this.All.Location = new System.Drawing.Point(514, 41);
-            this.All.Name = "All";
-            this.All.Size = new System.Drawing.Size(108, 21);
-            this.All.TabIndex = 124;
-            this.All.Text = "ALLIPS";
-            this.All.UseVisualStyleBackColor = true;
-            this.All.Click += new System.EventHandler(this.All_Click);
+            this.btnNone.Location = new System.Drawing.Point(514, 14);
+            this.btnNone.Name = "btnNone";
+            this.btnNone.Size = new System.Drawing.Size(108, 21);
+            this.btnNone.TabIndex = 125;
+            this.btnNone.Text = "Select None";
+            this.btnNone.UseVisualStyleBackColor = true;
+            this.btnNone.Click += new System.EventHandler(this.BtnNone_Click);
             // 
             // Form1
             // 
@@ -791,6 +803,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button All;
+        private System.Windows.Forms.Button btnNone;
     }
 }
 

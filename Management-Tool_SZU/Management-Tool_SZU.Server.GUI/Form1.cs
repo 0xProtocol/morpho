@@ -154,8 +154,8 @@ namespace Management_Tool_SZU.Server.GUI
             {/*/
                 try
                 {
-                    com.SelectVoice("Microsoft Hazel Desktop");
-                    com.SpeakAsync("Results are in the Statistic tab");
+                  //  com.SelectVoice("Microsoft Hazel Desktop");
+                 //   com.SpeakAsync("Results are in the Statistic tab");
                 }
                 catch (Exception)
                 {
@@ -552,16 +552,28 @@ namespace Management_Tool_SZU.Server.GUI
         
         private void All_Click(object sender, EventArgs e)
         {
-            ipAddressList2.Add(IPAddress.Parse("192.168.0.2"));
-            ipAddressList2.Add(IPAddress.Parse("192.168.0.4"));
+            ipAddressList2.Add(IPAddress.Parse("192.168.1.104"));
+            ipAddressList2.Add(IPAddress.Parse("192.168.137.1"));
             foreach (IPAddress item in ipAddressList2)
             {
                 Thread thread = new Thread(delegate () { GetStatisticForm(Convert.ToString(item)); } ) ;
                 thread.Start();
-                //GetStatisticForm(item);
                 tcWindow.SelectedIndex = 1;
             }
+            ipAddressList2.Clear();
             
+        }
+
+        private void BtnNone_Click(object sender, EventArgs e)
+        {
+            cbAlternative.SelectedIndex = cbAlternative.Items.Count - 1;
+            cbBaseBoard.SelectedIndex = cbBaseBoard.Items.Count - 1;
+            cbBIOS.SelectedIndex = cbBIOS.Items.Count - 1;
+            cbComputerSystem.SelectedIndex = cbComputerSystem.Items.Count - 1;
+            cbDiskDrive.SelectedIndex = cbDiskDrive.Items.Count - 1;
+            cbLogicalDisk.SelectedIndex = cbLogicalDisk.Items.Count - 1;
+            cbNetworkAdapter.SelectedIndex = cbNetworkAdapter.Items.Count - 1;
+            cboperatingsystem.SelectedIndex = cboperatingsystem.Items.Count - 1;
         }
     }
 }
