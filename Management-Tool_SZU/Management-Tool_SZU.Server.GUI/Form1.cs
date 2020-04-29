@@ -552,8 +552,10 @@ namespace Management_Tool_SZU.Server.GUI
         
         private void All_Click(object sender, EventArgs e)
         {
-            ipAddressList2.Add(IPAddress.Parse("192.168.1.104"));
-            ipAddressList2.Add(IPAddress.Parse("192.168.137.1"));
+            foreach (string item in lsb_discover.Items)
+            {
+                ipAddressList2.Add(IPAddress.Parse(item));
+            }
             foreach (IPAddress item in ipAddressList2)
             {
                 Thread thread = new Thread(delegate () { GetStatisticForm(Convert.ToString(item)); } ) ;
