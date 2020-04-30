@@ -47,3 +47,4 @@ C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management
 C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.exe
 C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.pdb
 C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csprojResolveAssemblyReference.cache
+C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Help.resources

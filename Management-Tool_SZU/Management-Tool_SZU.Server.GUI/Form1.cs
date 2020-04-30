@@ -676,6 +676,11 @@ namespace Management_Tool_SZU.Server.GUI
             }
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Help h = new Help();
+            h.Visible = true;
+        }
     }
 }
 
