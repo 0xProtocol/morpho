@@ -172,7 +172,7 @@ namespace Management_Tool_SZU.Server.GUI
         }
         private string Speech(string state)
         {
-            if (this.lsb_discover.SelectedIndex == -1 && state == "single")
+            if (this.lsb_discover.SelectedIndex == -1 && state == "single" || this.lsb_discover.SelectedIndex == -1 && state == "multiple")
             {
                 try
                 {
@@ -227,25 +227,48 @@ namespace Management_Tool_SZU.Server.GUI
             }
             if(cbmultiple.Checked == true)
             {
-                foreach (IPAddress item in ipAddressesmultiple)
+                string action2 = Speech("multiple");
+                if (action2 == "true")
                 {
-                    Thread thread = new Thread(delegate () { GetStatisticForm(Convert.ToString(item)); });
-                    thread.Start();
-                    tcWindow.SelectedIndex = 1;
+                    foreach (IPAddress item in ipAddressesmultiple)
+                    {
+                        Thread thread = new Thread(delegate () { GetStatisticForm(Convert.ToString(item)); });
+                        thread.Start();
+                        tcWindow.SelectedIndex = 1;
+                    }
                 }
             }
             else
             {
-                string action = Speech("single");
-                if (action == "true")
+                if (lsb_discover.SelectedItems.Count> 1)
                 {
-                    Thread thread = new Thread(delegate () { GetStatisticForm(Convert.ToString(lsb_discover.SelectedItem)); });
-                    thread.Start();
+                    string action = Speech("multiple");
+                    if (action == "true")
+                    {
+                        foreach (String item in lsb_discover.SelectedItems)
+                        {
+                            Thread thread = new Thread(delegate () { GetStatisticForm(item); });
+                            thread.Start();
+                        }
+                    }
+                }
+                if (lsb_discover.SelectedItems.Count == 1)
+                {
+                    string action = Speech("single");
+                    if (action == "true")
+                    {
+                        Thread thread = new Thread(delegate () { GetStatisticForm(Convert.ToString(lsb_discover.SelectedItem)); });
+                        thread.Start();
+                    }
+                    else
+                    {
+                    }
                 }
                 else
                 {
-
+                    Speech("single");
                 }
+                
             }
 
 
@@ -741,6 +764,8 @@ namespace Management_Tool_SZU.Server.GUI
             else
             {
                 ipAddressesmultiple.Add(IPAddress.Parse(item));
+                MessageBox.Show(item + " added");
+               // lsb_discover.SelectItem.
             }
         }
 
