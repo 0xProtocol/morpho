@@ -117,30 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="tbxHelp.Text" xml:space="preserve">
-    <value>MORPHO - MOdern Radical Program for Host Observation
-© Copyright 2020 
-All rights reserved
-
-1. What is MORPHO?:
-It is a simple program that allows you to receive information from all clients in your network that are using a Microsoft Windows™ and that are part of your home network. It depends on the individual settings if a client allows you to collect his hardware information. If it is allowed, you will be able to search for all kind of hardware information that is managed by Microsoft Windows™. Therefore you have the choice, which information you want to analyse. Sometimes it is possible to receive more than one value for a selected item. One of the main advantages of this program is, that you do not have to ask every client individually. You can use this software to manage everything on the server.
-
-2. Name origins:
-The name MORPHO stands for MOdern Radical Program for Host Observation. it is not coincidence, that the name of our software is identical to a butterfly. This family of butterflies usually owns a very special combination of blue colors. For that reason, we use this combination for the design of our program. The butterfly can also be found in our logo, which is located in the bottom left corner. 
-
-3. Layout:
-MORPHO is designed to look as simple as possible. Therefore, you get the main menu with 2 large output regions and the control panel for the information input. All textboxes are labeled, so it is very easy to find all desired functions. 
-
-4. Textboxes/Comboboxes:
-You have the possibility to enter all required information throw textboxes. Sometimes you only have the choice to select between a limited amount of properties. Therefore, you can use comboboxes that contain all available information for your output. Sometimes you have to follow different rules for your input. For instance, you are not able to enter an letters in the box for an IP address.
-
-5. Buttons:
-While our software is very powerful, there are not many buttons for the usage. You have the possibility to ask all for all information at once with the “Select All” button and to select nothing with the “Select None” button. You can search for all IP addresses in your network with the “Start Discovery” button. The main button of the program is the round button with the signature “Morph it!”. Here you can start the receiving process from your chosen client(s). This button shows a butterfly net and points out that you are cathing the information. 
-
-6. Statistic tab:
-This is the output window which you will see, after you have started the receiving process. With this matrix you get an overall perspective about all information from your clients. 
-</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

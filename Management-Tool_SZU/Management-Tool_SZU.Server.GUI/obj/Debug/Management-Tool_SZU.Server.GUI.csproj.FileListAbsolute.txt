@@ -17,7 +17,6 @@ D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Ma
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Shared.dll
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Shared.pdb
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csprojAssemblyReference.cache
-D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Form1.resources
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Properties.Resources.resources
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csproj.GenerateResource.cache
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csproj.CoreCompileInputs.cache
@@ -48,3 +47,5 @@ C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management
 C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.pdb
 C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csprojResolveAssemblyReference.cache
 C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Help.resources
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Help.resources
+D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Morpho.resources

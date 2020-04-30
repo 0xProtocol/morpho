@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Management_Tool_SZU.Server.GUI
 {
-    public partial class Form1 : Form
+    public partial class Morpho : Form
     {
-        public Form1()
+        public Morpho()
         {
             InitializeComponent();
             lvstatistics.FullRowSelect = true;
@@ -41,32 +41,33 @@ namespace Management_Tool_SZU.Server.GUI
         private int _sortColumnIndex = -1;
         private void lvItem_ColumnClick(object sender, ColumnClickEventArgs e)
         {
-            // Determine whether the column is the same as the last column clicked.
-            if (e.Column != _sortColumnIndex)
+            try
             {
-                // Set the sort column to the new column.
-                _sortColumnIndex = e.Column;
-                // Set the sort order to ascending by default.
-                lvstatistics.Sorting = SortOrder.Ascending;
-            }
-            else
-            {
-                // Determine what the last sort order was and change it.
-                if (lvstatistics.Sorting == SortOrder.Ascending)
-                    lvstatistics.Sorting = SortOrder.Descending;
-                else
-                    lvstatistics.Sorting = SortOrder.Ascending;
-            }
 
-            // Call the sort method to manually sort.
-            lvstatistics.Sort();
-            
-            // Set the ListViewItemSorter property to a new ListViewItemComparer object.
-            if (e.Column == lvstatistics.Columns["Result"].Index)
-                lvstatistics.ListViewItemSorter = new ListViewComparer(e.Column, lvstatistics.Sorting);
-            else
-                lvstatistics.ListViewItemSorter = new ListViewComparer(e.Column, lvstatistics.Sorting);
-                
+                if (e.Column != _sortColumnIndex)
+                {
+                    _sortColumnIndex = e.Column;
+                    lvstatistics.Sorting = SortOrder.Ascending;
+                }
+                else
+                {
+                    if (lvstatistics.Sorting == SortOrder.Ascending)
+                        lvstatistics.Sorting = SortOrder.Descending;
+                    else
+                        lvstatistics.Sorting = SortOrder.Ascending;
+                }
+
+                lvstatistics.Sort();
+
+                if (e.Column == lvstatistics.Columns["Result"].Index)
+                    lvstatistics.ListViewItemSorter = new ListViewComparer(e.Column, lvstatistics.Sorting);
+                else
+                    lvstatistics.ListViewItemSorter = new ListViewComparer(e.Column, lvstatistics.Sorting);
+            }
+            catch (Exception)
+            {
+                //Errorlog
+            }
         }
 
         private SpeechSynthesizer com = new SpeechSynthesizer();
@@ -119,6 +120,7 @@ namespace Management_Tool_SZU.Server.GUI
             lblCheck2.ForeColor = System.Drawing.Color.Black;
             if (nd.isworking == false)
             {
+                cbAllIPs.Enabled = false;
                 Discover("0");
             }
         }
@@ -168,12 +170,49 @@ namespace Management_Tool_SZU.Server.GUI
             GiveSelectedAdapterinTextBox();
             // lsb_networkadapter.SelectedIndex = lsb_networkadapter.Items.Count - 1;
         }
+        private string Speech(string state)
+        {
+            if (this.lsb_discover.SelectedIndex == -1 && state == "single")
+            {
+                try
+                {
+                    com.SelectVoice("Microsoft Hazel Desktop");
+                    com.SpeakAsync("Please enter a selection");
+                    return "false";
+                }
+                catch (Exception)
+                {
+
+                }
+                return "false";
+            }
+            else
+            {
+                try
+                {
+                    com.SelectVoice("Microsoft Hazel Desktop");
+                    com.SpeakAsync("Results are in the Statistic tab");
+                    return "true";
+
+                }
+                catch (Exception)
+                {
+
+                }
+                finally
+                {
+                    tcWindow.SelectedIndex = 1;
+                }
+                return "true";
+            }
+        }
 
         private void Cb_Click(object sender, EventArgs e)
         {
             lblCheck5.ForeColor = System.Drawing.Color.Black;
-            if(cbAllIPs.Checked == true)
+            if (cbAllIPs.Checked == true)
             {
+                Speech("all");
                 foreach (string item in lsb_discover.Items)
                 {
                     ipAddressList2.Add(System.Net.IPAddress.Parse(item));
@@ -186,47 +225,46 @@ namespace Management_Tool_SZU.Server.GUI
                 }
                 ipAddressList2.Clear();
             }
+            if(cbmultiple.Checked == true)
+            {
+                foreach (IPAddress item in ipAddressesmultiple)
+                {
+                    Thread thread = new Thread(delegate () { GetStatisticForm(Convert.ToString(item)); });
+                    thread.Start();
+                    tcWindow.SelectedIndex = 1;
+                }
+            }
             else
             {
-                Thread thread = new Thread(delegate () { GetStatisticForm(Convert.ToString(tbxuserip.Text)); });
-                thread.Start();
-                tcWindow.SelectedIndex = 1;
+                string action = Speech("single");
+                if (action == "true")
+                {
+                    Thread thread = new Thread(delegate () { GetStatisticForm(Convert.ToString(lsb_discover.SelectedItem)); });
+                    thread.Start();
+                }
+                else
+                {
+
+                }
             }
 
-           
+
         }
 
         private void GetStatisticForm(string ip)
         {
-          /*/  if (this.lsb_discover.SelectedIndex == -1)
+            try
             {
-                try
-                {
-                    com.SelectVoice("Microsoft Hazel Desktop");
-                    com.SpeakAsync("Please enter a selection");
-                }
-                catch (Exception)
-                {
-                }
-            }
-            else
-            {/*/
-                try
-                {
-                  //  com.SelectVoice("Microsoft Hazel Desktop");
-                 //   com.SpeakAsync("Results are in the Statistic tab");
-                }
-                catch (Exception)
-                {
-                }
                 WMICAction(ip);
-            
+            }
+            catch (Exception)
+            {
+            }
         }
 
         private void Lsb_discover_SelectedIndexChanged(object sender, EventArgs e)
         {
             string userip = lsb_discover.GetItemText(lsb_discover.SelectedItem);
-            tbxuserip.Text = userip;
         }
 
         private void LblLoading_Click(object sender, EventArgs e)
@@ -245,35 +283,39 @@ namespace Management_Tool_SZU.Server.GUI
             return tmp;
         }
         int counter = 0;
-        private void GiveIntoListview(string wmicvalue,string ip)
+        private void GiveIntoListview(string wmicvalue, string ip)
         {
             try
             {
                 string[] values = SplitIncominMessage(wmicvalue);
 
-                if (lvstatistics.Columns.Count < values.Length)
+                if (values.Length > 0)
                 {
-                    counter = values.Length - lvstatistics.Columns.Count;
-                    for (int i = 0; i < counter +1; i++)
-                    {
-                        lvstatistics.Columns.Add("Result", 155, HorizontalAlignment.Left);
-                    }
-                }
 
-                ListViewItem lvi = new ListViewItem(ip);
-                foreach (var item in values)
-                {
-                    lvi.SubItems.Add(item);
+                    if (lvstatistics.Columns.Count < values.Length)
+                    {
+                        counter = values.Length - lvstatistics.Columns.Count;
+                        for (int i = 0; i < counter + 1; i++)
+                        {
+                            lvstatistics.Columns.Add("Result", 155, HorizontalAlignment.Left);
+                        }
+                    }
+                    
+                    ListViewItem lvi = new ListViewItem(ip);
+                    foreach (var item in values)
+                    {
+                        lvi.SubItems.Add(item);
+                    }
+                    lvstatistics.Items.Add(lvi);
                 }
-                lvstatistics.Items.Add(lvi);
 
             }
             catch (Exception)
             {
 
-                
+
             }
-            
+
         }
 
         private void WMICAction(string ip)
@@ -282,7 +324,7 @@ namespace Management_Tool_SZU.Server.GUI
             if (cboperatingsystem.Text == "All")
             {
                 string OperatingSystemName = wmics.GetStatistic(ip, tbxusername.Text, tbxpassword.Text);
-                GiveIntoListview(OperatingSystemName,ip);
+                GiveIntoListview(OperatingSystemName, ip);
 
                 string OperatingSystemArchitecture = wmics.GetStatistic30(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(OperatingSystemArchitecture, ip);
@@ -467,7 +509,7 @@ namespace Management_Tool_SZU.Server.GUI
                 GiveIntoListview(DiskDriveMediaLoaded, ip);
 
                 string DiskDriveStatus = wmics.GetStatistic18(ip, tbxusername.Text, tbxpassword.Text);
-                GiveIntoListview(DiskDriveStatus,ip);
+                GiveIntoListview(DiskDriveStatus, ip);
 
                 string DiskDriveSize = wmics.GetStatistic19(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(DiskDriveSize, ip);
@@ -515,7 +557,7 @@ namespace Management_Tool_SZU.Server.GUI
             }
             if (cbLogicalDisk.Text == "FileSystem")
             {
-                string LogicalDiskFileSystem = wmics.GetStatistic22(ip ,tbxusername.Text, tbxpassword.Text);
+                string LogicalDiskFileSystem = wmics.GetStatistic22(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(LogicalDiskFileSystem, ip);
             }
             if (cbLogicalDisk.Text == "Size")
@@ -547,7 +589,7 @@ namespace Management_Tool_SZU.Server.GUI
             }
             if (cbNetworkAdapter.Text == "Description")
             {
-                string NetworkAdapterDescription = wmics.GetStatistic24(ip ,tbxusername.Text, tbxpassword.Text);
+                string NetworkAdapterDescription = wmics.GetStatistic24(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(NetworkAdapterDescription, ip);
             }
             if (cbNetworkAdapter.Text == "Manufacturer")
@@ -578,7 +620,7 @@ namespace Management_Tool_SZU.Server.GUI
             }
 
             //Alternative
-            if(cbAlternative.Text=="All")
+            if (cbAlternative.Text == "All")
             {
                 string Lastbootuptime = wmics.GetStatistic20(ip, tbxusername.Text, tbxpassword.Text);
                 GiveIntoListview(Lastbootuptime, ip); ;
@@ -621,11 +663,11 @@ namespace Management_Tool_SZU.Server.GUI
             cboperatingsystem.SelectedIndex = cboperatingsystem.Items.Count - 2;
         }
         public List<IPAddress> ipAddressList2 = new List<IPAddress>();
-        
+
         private void All_Click(object sender, EventArgs e)
         {
-            
-            
+
+
         }
 
         private void BtnNone_Click(object sender, EventArgs e)
@@ -645,6 +687,7 @@ namespace Management_Tool_SZU.Server.GUI
             if (cbAllIPs.Checked == true)
             {
                 lblCheck4.ForeColor = System.Drawing.Color.Black;
+                //tbxuserip.Text = "All IPs are selected!";
             }
             if (cbAllIPs.Checked != true)
             {
@@ -680,6 +723,30 @@ namespace Management_Tool_SZU.Server.GUI
         {
             Help h = new Help();
             h.Visible = true;
+        }
+
+        private void Tbxuserip_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public List<IPAddress> ipAddressesmultiple = new List<IPAddress>();
+        private void Lsb_discover_DoubleClick(object sender, EventArgs e)
+        {
+            string item = Convert.ToString(lsb_discover.SelectedItem);
+            if(ipAddressesmultiple.Contains(IPAddress.Parse(item)))
+            {
+
+            }
+            else
+            {
+                ipAddressesmultiple.Add(IPAddress.Parse(item));
+            }
+        }
+
+        private void Cbmultiple_CheckedChanged(object sender, EventArgs e)
+        {
+            //cbAllIPs.Enabled = false;
         }
     }
 }
