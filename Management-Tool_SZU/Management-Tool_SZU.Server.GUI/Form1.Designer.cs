@@ -91,8 +91,6 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.tcStatistics = new System.Windows.Forms.TabPage();
             this.lvstatistics = new System.Windows.Forms.ListView();
-            this.Property = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Result = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -846,9 +844,6 @@
             // 
             // lvstatistics
             // 
-            this.lvstatistics.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Property,
-            this.Result});
             this.lvstatistics.GridLines = true;
             this.lvstatistics.HideSelection = false;
             this.lvstatistics.Location = new System.Drawing.Point(16, 25);
@@ -857,16 +852,6 @@
             this.lvstatistics.TabIndex = 101;
             this.lvstatistics.UseCompatibleStateImageBehavior = false;
             this.lvstatistics.View = System.Windows.Forms.View.Details;
-            // 
-            // Property
-            // 
-            this.Property.Text = "Property";
-            this.Property.Width = 113;
-            // 
-            // Result
-            // 
-            this.Result.Text = "Result";
-            this.Result.Width = 155;
             // 
             // panel8
             // 
@@ -983,8 +968,6 @@
         private System.Windows.Forms.ComboBox cboperatingsystem;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.ListView lvstatistics;
-        private System.Windows.Forms.ColumnHeader Property;
-        private System.Windows.Forms.ColumnHeader Result;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cbBIOS;
