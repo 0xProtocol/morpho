@@ -757,15 +757,23 @@ namespace Management_Tool_SZU.Server.GUI
         private void Lsb_discover_DoubleClick(object sender, EventArgs e)
         {
             string item = Convert.ToString(lsb_discover.SelectedItem);
-            if(ipAddressesmultiple.Contains(IPAddress.Parse(item)))
+            try
             {
+                if (ipAddressesmultiple.Contains(IPAddress.Parse(item)))
+                {
 
-            }
-            else
+                }
+                else
+                {
+                    ipAddressesmultiple.Add(IPAddress.Parse(item));
+                    MessageBox.Show(item + " added");
+                    int position = lsb_discover.Items.IndexOf(item);
+                    lsb_discover.Items.RemoveAt(position);
+                    lsb_discover.Items.Insert(position, item + " ✔");
+                }
+            }catch(FormatException fe)
             {
-                ipAddressesmultiple.Add(IPAddress.Parse(item));
-                MessageBox.Show(item + " added");
-               // lsb_discover.SelectItem.
+                MessageBox.Show("This IP address has already been selected!");
             }
         }
 

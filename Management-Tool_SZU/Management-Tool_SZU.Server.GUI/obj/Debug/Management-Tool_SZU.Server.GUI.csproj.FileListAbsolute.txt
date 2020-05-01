@@ -40,7 +40,6 @@ C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management
 C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Server.GUI.pdb
 C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Shared.dll
 C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\bin\Debug\Management-Tool_SZU.Shared.pdb
-C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Form1.resources
 C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Properties.Resources.resources
 C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.csproj.GenerateResource.cache
 C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management-Tool_SZU.Server.GUI.exe
@@ -49,3 +48,4 @@ C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management
 C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Help.resources
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Help.resources
 D:\GitHub\morpho\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Morpho.resources
+C:\Users\Julian\Documents\GitHub\Software\morpho1\Management-Tool_SZU\Management-Tool_SZU.Server.GUI\obj\Debug\Management_Tool_SZU.Server.GUI.Morpho.resources
