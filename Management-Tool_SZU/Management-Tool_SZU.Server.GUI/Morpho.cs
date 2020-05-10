@@ -88,7 +88,7 @@ namespace Management_Tool_SZU.Server.GUI
         Thread discoverythread;
 
         /// <summary>
-        /// ???
+        /// Loading the values from Network Discovery generated into the textboxes
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -114,13 +114,14 @@ namespace Management_Tool_SZU.Server.GUI
                 tbx_Discovery.Text = splitzeile[1];
                 tbxNetwork.Text = splitzeile[2];
             }
+
             catch (Exception)
             {
             }
         }
 
         /// <summary>
-        /// ???
+        /// The Disvocery Process
         /// </summary>
         /// <param name="value"></param>
         public void Discover(string value)
@@ -142,7 +143,7 @@ namespace Management_Tool_SZU.Server.GUI
         }
 
         /// <summary>
-        /// ???
+        /// The method for the Button starts Disocvery
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
