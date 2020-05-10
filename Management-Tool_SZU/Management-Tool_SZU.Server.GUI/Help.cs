@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace Management_Tool_SZU.Server.GUI
 {
+    /// <summary>
+    /// Class from the Help GUI
+    /// </summary>
     public partial class Help : Form
     {
+        /// <summary>
+        /// Constructor of the class Help
+        /// </summary>
         public Help()
         {
             InitializeComponent();

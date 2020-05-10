@@ -8,6 +8,9 @@ using System.Windows.Forms;
 
 namespace Management_Tool_SZU.Shared
 {
+    /// <summary>
+    /// Class NetworkDiscovery to get IP-Addresses
+    /// </summary>
     public class NetworkDiscovery
     {
         #region Import
