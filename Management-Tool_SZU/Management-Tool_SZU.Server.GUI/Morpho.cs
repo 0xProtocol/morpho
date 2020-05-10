@@ -9,8 +9,14 @@ using System.Windows.Forms;
 
 namespace Management_Tool_SZU.Server.GUI
 {
+    /// <summary>
+    /// Code from the Morpho GUI
+    /// </summary>
     public partial class Morpho : Form
     {
+        /// <summary>
+        /// Constructor of the class Morpho
+        /// </summary>
         public Morpho()
         {
             InitializeComponent();
@@ -39,6 +45,12 @@ namespace Management_Tool_SZU.Server.GUI
         }
 
         private int _sortColumnIndex = -1;
+
+        /// <summary>
+        /// Method for sorting the list view data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lvItem_ColumnClick(object sender, ColumnClickEventArgs e)
         {
             try
@@ -74,6 +86,12 @@ namespace Management_Tool_SZU.Server.GUI
         NetworkDiscovery nd = new NetworkDiscovery();
         WMICStatistic wmics = new WMICStatistic();
         Thread discoverythread;
+
+        /// <summary>
+        /// ???
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ServerSettings_Load(object sender, EventArgs e)
         {
             lsb_networkadapter.Items.Clear();
@@ -83,6 +101,9 @@ namespace Management_Tool_SZU.Server.GUI
             tbxNetwork.Text = splitzeile[2];
         }
 
+        /// <summary>
+        /// Writes the selected ip address and subnet mask in text boxes
+        /// </summary>
         private void GiveSelectedAdapterinTextBox()
         {
             try
@@ -97,6 +118,11 @@ namespace Management_Tool_SZU.Server.GUI
             {
             }
         }
+
+        /// <summary>
+        /// ???
+        /// </summary>
+        /// <param name="value"></param>
         public void Discover(string value)
         {
             try
@@ -115,6 +141,11 @@ namespace Management_Tool_SZU.Server.GUI
             }
         }
 
+        /// <summary>
+        /// ???
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Discover_Click_1(object sender, EventArgs e)
         {
             lblCheck2.ForeColor = System.Drawing.Color.Black;
@@ -125,51 +156,21 @@ namespace Management_Tool_SZU.Server.GUI
             }
         }
 
-        private void TcNetworkDicovery_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Cms_Opening(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void SelectAdapterToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            GiveSelectedAdapterinTextBox();
-        }
-
-        private void Panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void LblSearchIP_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TbxNetwork_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Writes the selected ip address and subnet mask in text boxes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Lsb_networkadapter_SelectedIndexChanged(object sender, EventArgs e)
         {
             GiveSelectedAdapterinTextBox();
-            // lsb_networkadapter.SelectedIndex = lsb_networkadapter.Items.Count - 1;
         }
+
+        /// <summary>
+        /// Method for voice output
+        /// </summary>
+        /// <param name="state"></param>
+        /// <returns></returns>
         private string Speech(string state)
         {
             if (this.lsb_discover.SelectedIndex == -1 && state == "single" || this.lsb_discover.SelectedIndex == -1 && state == "multiple")
@@ -207,6 +208,11 @@ namespace Management_Tool_SZU.Server.GUI
             }
         }
 
+        /// <summary>
+        /// Get wmic information of the selected PC(s)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Cb_Click(object sender, EventArgs e)
         {
             lblCheck5.ForeColor = System.Drawing.Color.Black;
@@ -274,6 +280,10 @@ namespace Management_Tool_SZU.Server.GUI
 
         }
 
+        /// <summary>
+        /// Get wmic statistics from the specific ip
+        /// </summary>
+        /// <param name="ip"></param>
         private void GetStatisticForm(string ip)
         {
             try
@@ -285,16 +295,11 @@ namespace Management_Tool_SZU.Server.GUI
             }
         }
 
-        private void Lsb_discover_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string userip = lsb_discover.GetItemText(lsb_discover.SelectedItem);
-        }
-
-        private void LblLoading_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// Splits incoming message
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         private string[] SplitIncominMessage(string text)
         {
             text = text.Replace("\t", " ");
@@ -305,7 +310,13 @@ namespace Management_Tool_SZU.Server.GUI
 
             return tmp;
         }
+
         int counter = 0;
+        /// <summary>
+        /// Writes a wmic value and the ip into the listview
+        /// </summary>
+        /// <param name="wmicvalue"></param>
+        /// <param name="ip"></param>
         private void GiveIntoListview(string wmicvalue, string ip)
         {
             try
@@ -341,6 +352,10 @@ namespace Management_Tool_SZU.Server.GUI
 
         }
 
+        /// <summary>
+        /// Gets the selected wmic values
+        /// </summary>
+        /// <param name="ip"></param>
         private void WMICAction(string ip)
         {
             // OS
@@ -674,6 +689,11 @@ namespace Management_Tool_SZU.Server.GUI
             }
         }
 
+        /// <summary>
+        /// Selectes option "all" on all statics comboboxes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectAll_Click(object sender, EventArgs e)
         {
             cbAlternative.SelectedIndex = cbAlternative.Items.Count - 2;
@@ -687,12 +707,11 @@ namespace Management_Tool_SZU.Server.GUI
         }
         public List<IPAddress> ipAddressList2 = new List<IPAddress>();
 
-        private void All_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
+        /// <summary>
+        /// Selectes option none on all statics comboboxes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnNone_Click(object sender, EventArgs e)
         {
             cbAlternative.SelectedIndex = cbAlternative.Items.Count - 1;
@@ -705,6 +724,11 @@ namespace Management_Tool_SZU.Server.GUI
             cboperatingsystem.SelectedIndex = cboperatingsystem.Items.Count - 1;
         }
 
+        /// <summary>
+        /// Checks if cbAllIPs is checked to change the state at the checklist
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbAllIPs_CheckedChanged(object sender, EventArgs e)
         {
             if (cbAllIPs.Checked == true)
@@ -718,6 +742,11 @@ namespace Management_Tool_SZU.Server.GUI
             }
         }
 
+        /// <summary>
+        /// Checks if there is text in tbxusername to change the state at the checklist
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxusername_TextChanged(object sender, EventArgs e)
         {
             if (tbxusername.TextLength == 0 || tbxpassword.TextLength == 0)
@@ -730,6 +759,11 @@ namespace Management_Tool_SZU.Server.GUI
             }
         }
 
+        /// <summary>
+        /// Checks if there is text in tbxpassword to change the state at the checklist
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbxpassword_TextChanged(object sender, EventArgs e)
         {
             if (tbxusername.TextLength == 0 || tbxpassword.TextLength == 0)
@@ -742,18 +776,24 @@ namespace Management_Tool_SZU.Server.GUI
             }
         }
 
+        /// <summary>
+        /// Opens the help window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Help h = new Help();
             h.Visible = true;
         }
 
-        private void Tbxuserip_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         public List<IPAddress> ipAddressesmultiple = new List<IPAddress>();
+
+        /// <summary>
+        /// Doubleclick to select multiple IPs
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Lsb_discover_DoubleClick(object sender, EventArgs e)
         {
             string item = Convert.ToString(lsb_discover.SelectedItem);
@@ -777,9 +817,59 @@ namespace Management_Tool_SZU.Server.GUI
             }
         }
 
+        private void Tbxuserip_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void All_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
         private void Cbmultiple_CheckedChanged(object sender, EventArgs e)
         {
             //cbAllIPs.Enabled = false;
+        }
+
+        private void TcNetworkDicovery_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LblSearchIP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GroupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TbxNetwork_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Lsb_discover_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblLoading_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

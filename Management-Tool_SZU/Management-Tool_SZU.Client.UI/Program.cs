@@ -8,8 +8,16 @@ using System.Threading.Tasks;
 
 namespace Management_Tool_SZU.Client.UI
 {
+    /// <summary>
+    /// Client (not used)
+    /// </summary>
+    /// <param name="args"></param>
     class Program
     {
+        /// <summary>
+        /// Client (not used)
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             //Temperatur - CPU
