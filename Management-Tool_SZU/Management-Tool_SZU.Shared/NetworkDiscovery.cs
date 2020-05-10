@@ -28,6 +28,10 @@ namespace Management_Tool_SZU.Shared
 
         #endregion
         #region Methoden
+        /// <summary>
+        /// get the Interfaces
+        /// </summary>
+        /// <param name="lst"></param>
         public void getip(ListBox lst)
         {
             NetworkInterface[] Interfaces = NetworkInterface.GetAllNetworkInterfaces();
@@ -49,6 +53,10 @@ namespace Management_Tool_SZU.Shared
             }
         }
 
+        /// <summary>
+        /// get the Subnets and build Sectors
+        /// </summary>
+        /// <param name="subnetmask"></param>
         public void getSubnet(TextBox subnetmask)
         {
             isworking = true;
@@ -65,6 +73,11 @@ namespace Management_Tool_SZU.Shared
             sector4 = 255 - sector4;
         }
 
+        /// <summary>
+        /// Add all possible IPs into a List for further purposes
+        /// </summary>
+        /// <param name="discovery"></param>
+        /// <param name="lst"></param>
         public void FillArpResults(TextBox discovery, ListBox lst)
         {
             serverAddr = discovery.Text;
@@ -111,6 +124,12 @@ namespace Management_Tool_SZU.Shared
         }
         #endregion
         #region QuickSearch
+        /// <summary>
+        /// For each item in this list, a new thread is created to test whether the IP address is currently available.
+        /// </summary>
+        /// <param name="lst"></param>
+        /// <param name="pb"></param>
+        /// <param name="cb"></param>
         public void QuickSearch(ListBox lst, ProgressBar pb,CheckBox cb)
         {
             pb.Value = 0;
@@ -126,6 +145,12 @@ namespace Management_Tool_SZU.Shared
             isworking = false;
             cb.Enabled = true;
         }
+
+        /// <summary>
+        /// The method for Sending Arp Requests
+        /// </summary>
+        /// <param name="dst"></param>
+        /// <param name="lst"></param>
         private void SendArpRequestQuickSearch(IPAddress dst, ListBox lst)
         {
             byte[] macAddr = new byte[6];
